@@ -7,8 +7,8 @@ function Welcome() {
       <Image
         src="/assets/welcome_illustration.png"
         alt="welcome mzo"
-        width={600} // Largeur fixe
-        height={600} // Hauteur fixe
+        width={600} 
+        height={600} 
         style={{ width: "40%", height: "auto" }}
       />
     </div>
