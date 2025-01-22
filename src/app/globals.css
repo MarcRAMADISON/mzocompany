@@ -36,6 +36,15 @@ a {
   text-decoration: none;
 }
 
+.react-multiple-carousel__arrow--right{
+  right: 0px !important
+}
+.react-multiple-carousel__arrow--left{
+  left: 0px !important
+}
+.carousel_itemClass__me6F7{
+  text-align: center;
+}
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
