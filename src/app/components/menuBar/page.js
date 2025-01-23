@@ -11,7 +11,6 @@ function MenuBar() {
   const [toggleActivity, setToggleActivity] = useState(false);
   const [toggleContact, setToggleContact] = useState(false);
 
-
   const toggleMenu = () => {
     const idMenu = document.querySelector("#menuBlockId");
     const burgerMenu = document.querySelector("#burger_menu_id");
@@ -24,14 +23,12 @@ function MenuBar() {
         spans[2].style.transform = "";
         idMenu.style.height = "0px";
         idMenu.style.opacity = "0";
-
       } else {
         spans[0].style.transform = "translateY(13px) rotate(45deg)";
         spans[1].style.opacity = "0";
         spans[2].style.transform = "translateY(-13px) rotate(-45deg)";
-        idMenu.style.height = "100px";
+        idMenu.style.height = "300px";
         idMenu.style.opacity = "1";
-
       }
 
       return !prev;
@@ -45,9 +42,8 @@ function MenuBar() {
     const sousMenu = document.querySelector("#sousMenu");
     const sousMenuContact = document.querySelector("#sousMenuContact");
 
-    sousMenuContact.style.height = "0"
-    sousMenuContact.style.opacity = "0"
-
+    sousMenuContact.style.height = "0";
+    sousMenuContact.style.opacity = "0";
 
     setToggleActivity((prev) => {
       if (prev) {
@@ -62,15 +58,15 @@ function MenuBar() {
     });
   };
 
-  const handleContactClick=(e)=>{
+  const handleContactClick = (e) => {
     e.preventDefault();
     e.stopPropagation();
 
     const sousMenu = document.querySelector("#sousMenuContact");
     const sousMenuActivity = document.querySelector("#sousMenu");
 
-    sousMenuActivity.style.height = '0'
-    sousMenuActivity.style.opacity = '0'
+    sousMenuActivity.style.height = "0";
+    sousMenuActivity.style.opacity = "0";
 
     setToggleContact((prev) => {
       if (prev) {
@@ -83,11 +79,11 @@ function MenuBar() {
 
       return !prev;
     });
-  }
+  };
 
   return (
     <div>
-      <div style={{display:'flex',flexDirection:'column'}}>
+      <div style={{ display: "flex", flexDirection: "column" }}>
         <div className={style.container}>
           <Image
             className={style.logo}
@@ -108,7 +104,11 @@ function MenuBar() {
               onClick={handleActivityClick}
             >
               <h5 className={style.activity}>Activité</h5>
-              {toggleActivity? <div className={style.arrow_up}></div> :  <div className={style.arrow_down}></div>}
+              {toggleActivity ? (
+                <div className={style.arrow_up}></div>
+              ) : (
+                <div className={style.arrow_down}></div>
+              )}
             </div>
             <div
               style={{
@@ -120,7 +120,11 @@ function MenuBar() {
               onClick={handleContactClick}
             >
               <h5 className={style.activity}>Contact</h5>
-              {toggleContact? <div className={style.arrow_up}></div> :  <div className={style.arrow_down}></div>}
+              {toggleContact ? (
+                <div className={style.arrow_up}></div>
+              ) : (
+                <div className={style.arrow_down}></div>
+              )}
             </div>
             <div className={style.doteContainer}>
               <div className={style.dote}></div>
@@ -129,15 +133,39 @@ function MenuBar() {
             </div>
           </div>
         </div>
-        <div style={{justifyContent: 'space-around'}} className={style.sous_menu} id="sousMenu">
-          {listActivity.map((activity,index)=>{
-            return <Image key={index} src={activity.logoUrl} width={120} height={70} alt="logo mzo activity"/>
+        <div
+          style={{ justifyContent: "space-around" }}
+          className={style.sous_menu}
+          id="sousMenu"
+        >
+          {listActivity.map((activity, index) => {
+            return (
+              <Image
+                key={index}
+                src={activity.logoUrl}
+                width={120}
+                height={70}
+                alt="logo mzo activity"
+              />
+            );
           })}
         </div>
-        <div style={{justifyContent:'center'}} className={style.sous_menu} id="sousMenuContact">
-            {listSocialMedia.map((media,index)=>{
-              return <Image key={index} src={media.urlImage} width={80} height={80} alt="social media link image"/>
-            })}
+        <div
+          style={{ justifyContent: "center" }}
+          className={style.sous_menu}
+          id="sousMenuContact"
+        >
+          {listSocialMedia.map((media, index) => {
+            return (
+              <Image
+                key={index}
+                src={media.urlImage}
+                width={80}
+                height={80}
+                alt="social media link image"
+              />
+            );
+          })}
         </div>
       </div>
 
@@ -159,7 +187,50 @@ function MenuBar() {
             <span></span>
           </div>
         </div>
-        <div className={style.menuBlock} id="menuBlockId"></div>
+        <div className={style.menuBlock} id="menuBlockId">
+          <h5 className={style.menuItem} style={{marginTop:"30px", color: "#010029"}}>Acceuil</h5>
+          <h5 className={style.menuItem} style={{ marginTop: "20px",paddingTop:"10px",color: "#010029",borderTop:"1px solid #010029",width:'90%',textAlign:"center" }}>
+            Activités
+          </h5>
+          <div
+            style={{
+              display: "flex",
+              justifyContent:'space-around',
+              marginRight:'20px',
+              width: "100%",
+            }}
+          >
+            {listActivity.map((activity, index) => {
+              return (
+                <Image
+                  key={index}
+                  src={activity.logoUrl}
+                  width={50}
+                  height={40}
+                  alt="logo mzo activity"
+                />
+              );
+            })}
+          </div>
+          <h5 className={style.menuItem} style={{ marginTop: "20px",paddingTop:"10px",color: "#010029",borderTop:"1px solid #010029",width:'90%',textAlign:"center" }}>
+            Contact
+          </h5>
+          <div
+            style={{ display: "flex", justifyContent: "center", width: "100%" }}
+          >
+            {listSocialMedia.map((media, index) => {
+              return (
+                <Image
+                  key={index}
+                  src={media.urlImage}
+                  width={50}
+                  height={50}
+                  alt="logo mzo activity"
+                />
+              );
+            })}
+          </div>
+        </div>
       </div>
     </div>
   );
