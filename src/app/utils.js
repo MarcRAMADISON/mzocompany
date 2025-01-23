@@ -30,4 +30,10 @@ export const listActivity = [
         "Simplifiez vos échanges commerciaux entre la Chine et Madagascar avec MZO Business et ses services d'importation et transit sur mesure.",
     },
   ];
+
+  export const listSocialMedia=[
+    {url:"",urlImage:"/assets/facebook.png",name:'FACEBOOK'},
+    {url:"",urlImage:"/assets/linkedin.png",name:'LINKEDIN'},
+    {url:"",urlImage:"/assets/watsapp.png",name:"WATSAPP"}
+  ]
   

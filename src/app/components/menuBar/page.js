@@ -4,10 +4,13 @@ import { listActivity } from "@/app/utils";
 import style from "./menuBar.module.css";
 import Image from "next/image";
 import { useState } from "react";
+import { listSocialMedia } from "@/app/utils";
 
 function MenuBar() {
   const [toggleMobile, setToggleMobile] = useState(false);
   const [toggleActivity, setToggleActivity] = useState(false);
+  const [toggleContact, setToggleContact] = useState(false);
+
 
   const toggleMenu = () => {
     const idMenu = document.querySelector("#menuBlockId");
@@ -40,6 +43,11 @@ function MenuBar() {
     e.stopPropagation();
 
     const sousMenu = document.querySelector("#sousMenu");
+    const sousMenuContact = document.querySelector("#sousMenuContact");
+
+    sousMenuContact.style.height = "0"
+    sousMenuContact.style.opacity = "0"
+
 
     setToggleActivity((prev) => {
       if (prev) {
@@ -53,6 +61,29 @@ function MenuBar() {
       return !prev;
     });
   };
+
+  const handleContactClick=(e)=>{
+    e.preventDefault();
+    e.stopPropagation();
+
+    const sousMenu = document.querySelector("#sousMenuContact");
+    const sousMenuActivity = document.querySelector("#sousMenu");
+
+    sousMenuActivity.style.height = '0'
+    sousMenuActivity.style.opacity = '0'
+
+    setToggleContact((prev) => {
+      if (prev) {
+        sousMenu.style.height = "0px";
+        sousMenu.style.opacity = "0";
+      } else {
+        sousMenu.style.height = "150px";
+        sousMenu.style.opacity = "1";
+      }
+
+      return !prev;
+    });
+  }
 
   return (
     <div>
@@ -79,8 +110,18 @@ function MenuBar() {
               <h5 className={style.activity}>Activité</h5>
               {toggleActivity? <div className={style.arrow_up}></div> :  <div className={style.arrow_down}></div>}
             </div>
-
-            <h5 className={style.menuItem}>Contact</h5>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                cursor: "pointer",
+              }}
+              id="activity"
+              onClick={handleContactClick}
+            >
+              <h5 className={style.activity}>Contact</h5>
+              {toggleContact? <div className={style.arrow_up}></div> :  <div className={style.arrow_down}></div>}
+            </div>
             <div className={style.doteContainer}>
               <div className={style.dote}></div>
               <div className={style.dote}></div>
@@ -88,10 +129,15 @@ function MenuBar() {
             </div>
           </div>
         </div>
-        <div className={style.sous_menu} id="sousMenu">
+        <div style={{justifyContent: 'space-around'}} className={style.sous_menu} id="sousMenu">
           {listActivity.map((activity,index)=>{
             return <Image key={index} src={activity.logoUrl} width={120} height={70} alt="logo mzo activity"/>
           })}
+        </div>
+        <div style={{justifyContent:'center'}} className={style.sous_menu} id="sousMenuContact">
+            {listSocialMedia.map((media,index)=>{
+              return <Image key={index} src={media.urlImage} width={80} height={80} alt="social media link image"/>
+            })}
         </div>
       </div>
 
