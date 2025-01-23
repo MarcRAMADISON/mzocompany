@@ -21,7 +21,7 @@ function About() {
         alt="mzo logo black"
         width={600}
         height={600}
-        style={{ width: "20%", height: "auto" }}
+        className={style.image}
       />
       <h5 className={style.title}>" Au cœur de vos projets, à la source de vos succès. "</h5>
       <CustomCarousel rows={data}/>

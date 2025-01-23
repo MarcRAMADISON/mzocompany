@@ -9,7 +9,7 @@ function Welcome() {
         alt="welcome mzo"
         width={600} 
         height={600} 
-        style={{ width: "40%", height: "auto" }}
+        className={style.image}
       />
     </div>
   );

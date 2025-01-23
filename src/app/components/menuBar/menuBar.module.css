@@ -5,6 +5,7 @@
     background-color: #010029;
     width: 100%;
     height:100px;
+    position:fixed;
 }
 
 .logo{
@@ -52,4 +53,64 @@
     width: 100%;
     height: 100px;
     background-color: rgba(0,0,0,0.5);
+}
+
+  .burger_menu {
+    width: 40px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+  
+  .burger_menu span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background: #fff;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Animation */
+  .burger_menu.active span:nth-child(1) {
+    transform: translateY(13px) rotate(45deg);
+  }
+  
+  .burger_menu.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .burger_menu.active span:nth-child(3) {
+    transform: translateY(-13px) rotate(-45deg);
+  }
+  
+  .mobileContainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #010029;
+    width:100%;
+    height:80px
+}
+
+.menuBlock{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 0px;
+    transition: all 0.5s ease-in;
+    background-color: rgba(0,0,0,0.5);
+}
+
+@media (max-width:920px){
+
+    .mobileBlock{
+        display: block;
+    }
+    
+    .container{
+        display: none;
+    }
 }
