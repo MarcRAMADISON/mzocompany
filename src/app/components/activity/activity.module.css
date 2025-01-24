@@ -51,6 +51,7 @@
     }
     .container{
         background-image: url('/assets/mobile_activity_background.png');
+        width:100vw;
     }
 }
 
@@ -59,5 +60,8 @@
         grid-template-columns: 100%;
         row-gap: 60px;
         margin-bottom: 100px;
+    }
+    .container{
+        background-image: url('/assets/small_activity_background.png');
     }
 }
