@@ -20,6 +20,7 @@
     height: auto; 
     z-index:0;
     animation: heartbeat 3s infinite ease-in-out;
+    margin-top: -300px;
 }
 
 .image{

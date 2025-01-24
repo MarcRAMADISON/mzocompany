@@ -1,6 +1,7 @@
 import style from "./about.module.css";
 import Image from "next/image";
 import CustomCarousel from "../carousel/page";
+import ScrollAppear from "../scrollAppear/page";
 
 const data=[
     "/assets/mzo_contact.png",
@@ -24,7 +25,7 @@ function About() {
         className={style.image}
       />
       <h5 className={style.title}>" Au cœur de vos projets, à la source de vos succès. "</h5>
-      <CustomCarousel rows={data}/>
+        <CustomCarousel rows={data}/>
       <h5 className={style.sousTitle}>Avec Mzo Company,</h5>
       <h6 className={style.text}>Chaque service est conçu pour répondre à vos besoins spécifiques.</h6>
     </div>
