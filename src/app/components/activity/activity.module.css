@@ -58,7 +58,7 @@
 @media (max-width:464px){
     .activityBlock{
         grid-template-columns: 100%;
-        row-gap: 60px;
+        row-gap: 160px;
         margin-bottom: 100px;
     }
     .container{
