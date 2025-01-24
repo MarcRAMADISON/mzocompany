@@ -1,7 +1,7 @@
 "use client"; // Nécessaire pour les composants avec des effets dans Next.js 13+
 
 import React, { useEffect, useState } from "react";
-import styles from "./ScrollAppear.module.css"; // Ton fichier CSS module
+import styles from "./scrollAppear.module.css"; // Ton fichier CSS module
 
 const ScrollAppear = ({ children,style={}, }) => {
   const [isVisible, setIsVisible] = useState(false);
