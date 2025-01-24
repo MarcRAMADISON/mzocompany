@@ -45,6 +45,34 @@ a {
 .carousel_itemClass__me6F7{
   text-align: center;
 }
+
+.pageDoteContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 250px;
+  margin: 0px 100px 0px 50px;
+  place-self: center;
+  margin-top: 50px;
+  margin-left: 100px;
+}
+
+.pageDote {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #010029
+}
+
+@media (max-width:920px){
+  .pageDote {
+    width: 10px;
+    height: 10px;
+  }
+  .pageDoteContainer{
+    width:150px
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

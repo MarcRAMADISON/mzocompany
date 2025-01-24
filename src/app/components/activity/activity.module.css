@@ -1,10 +1,11 @@
 .container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width:100%;
+    width:100vw;
     height:auto;
-    min-height: 115vh; 
+    min-height: 920px;
     background-image: url('/assets/activity_background.png'); 
     background-size: cover; 
     background-position: center; 
@@ -21,10 +22,11 @@
 .activityBlock{
     display: grid;
     grid-template-columns: repeat(5,1fr);
-    width: 90%;
+    width: 90vw;
     gap:50px;
     letter-spacing: 2px;
     line-height: 25px;
+    margin-bottom: 100px;
 }
 
 .description{
@@ -46,6 +48,9 @@
     .activityBlock{
         grid-template-columns: repeat(2,1fr);
         margin-bottom: 100px;
+    }
+    .container{
+        background-image: url('/assets/mobile_activity_background.png');
     }
 }
 

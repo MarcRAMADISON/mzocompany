@@ -160,8 +160,8 @@ function MenuBar() {
               <Image
                 key={index}
                 src={media.urlImage}
-                width={80}
-                height={80}
+                width={70}
+                height={70}
                 alt="social media link image"
               />
             );

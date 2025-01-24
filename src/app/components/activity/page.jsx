@@ -27,6 +27,11 @@ function Activity() {
           );
         })}
       </div>
+      <div className="pageDoteContainer">
+        <div className="pageDote"></div>
+        <div className="pageDote"></div>
+        <div className="pageDote"></div>
+      </div>
     </div>
   );
 }
