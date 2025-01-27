@@ -13,13 +13,19 @@ function MenuBar() {
 
   const activityRef = useRef(null);
   const contactRef = useRef(null);
+  const contactButtonRef = useRef(null);
+  const activityButtonRef = useRef(null);
 
   const handleClickOutside = (event) => {
     if (
       activityRef.current &&
       !activityRef.current.contains(event.target) &&
       contactRef.current &&
-      !contactRef.current.contains(event.target)
+      !contactRef.current.contains(event.target) &&
+      contactButtonRef.current &&
+      !contactButtonRef.current.contains(event.target) &&
+      activityButtonRef.current &&
+      !activityButtonRef.current.contains(event.target)
     ) {
       sousMenuContact.style.height = "0";
       sousMenuContact.style.opacity = "0"; 
@@ -129,6 +135,7 @@ function MenuBar() {
               }}
               id="activity"
               onClick={handleActivityClick}
+              ref={activityButtonRef}
             >
               <h5 className={style.activity}>Activité</h5>
               {toggleActivity ? (
@@ -145,6 +152,7 @@ function MenuBar() {
               }}
               id="activity"
               onClick={handleContactClick}
+              ref={contactButtonRef}
             >
               <h5 className={style.activity}>Contact</h5>
               {toggleContact ? (
