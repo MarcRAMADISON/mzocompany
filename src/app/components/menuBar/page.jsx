@@ -3,13 +3,40 @@
 import { listActivity } from "@/app/utils";
 import style from "./menuBar.module.css";
 import Image from "next/image";
-import { useState } from "react";
+import { useState,useRef,useEffect } from "react";
 import { listSocialMedia } from "@/app/utils";
 
 function MenuBar() {
   const [toggleMobile, setToggleMobile] = useState(false);
   const [toggleActivity, setToggleActivity] = useState(false);
   const [toggleContact, setToggleContact] = useState(false);
+
+  const activityRef = useRef(null);
+  const contactRef = useRef(null);
+
+  const handleClickOutside = (event) => {
+    if (
+      activityRef.current &&
+      !activityRef.current.contains(event.target) &&
+      contactRef.current &&
+      !contactRef.current.contains(event.target)
+    ) {
+      sousMenuContact.style.height = "0";
+      sousMenuContact.style.opacity = "0"; 
+      sousMenu.style.height = "0px";
+      sousMenu.style.opacity = "0";
+      setToggleActivity(false);
+      setToggleContact(false)
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   const toggleMenu = () => {
     const idMenu = document.querySelector("#menuBlockId");
@@ -137,6 +164,7 @@ function MenuBar() {
           style={{ justifyContent: "space-around" }}
           className={style.sous_menu}
           id="sousMenu"
+          ref={activityRef}
         >
           {listActivity.map((activity, index) => {
             return (
@@ -154,6 +182,7 @@ function MenuBar() {
           style={{ justifyContent: "center" }}
           className={style.sous_menu}
           id="sousMenuContact"
+          ref={contactRef}
         >
           {listSocialMedia.map((media, index) => {
             return (
