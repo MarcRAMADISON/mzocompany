@@ -4,25 +4,25 @@ import CustomCarousel from "../carousel/page";
 import ScrollAppear from "../scrollAppear/page";
 
 const data = [
-  "/assets/carrousel1.jpg",
+  "/assets/carrousel1.jpeg",
   "/assets/carrousel2.jpg",
   "/assets/carrousel3.jpg",
   "/assets/carrousel4.jpg",
-  "/assets/carrousel5.jpg",
+  "/assets/carrousel5.jpeg",
   "/assets/carrousel6.jpg",
   "/assets/carrousel7.jpg",
   "/assets/carrousel8.jpg",
-  "/assets/carrousel9.jpg",
-  "/assets/carrousel10.jpg",
+  "/assets/carrousel9.jpeg",
+  "/assets/carrousel10.jpeg",
   "/assets/carrousel11.jpg",
   "/assets/carrousel12.jpg",
   "/assets/carrousel13.jpg",
   "/assets/carrousel14.jpg",
   "/assets/carrousel15.jpg",
-  "/assets/carrousel16.jpg",
-  "/assets/carrousel17.jpg",
-  "/assets/carrousel18.jpg",
-  "/assets/carrousel19.jpg",
+  "/assets/carrousel16.jpeg",
+  "/assets/carrousel17.jpeg",
+  "/assets/carrousel18.jpeg",
+  "/assets/carrousel19.jpeg",
   "/assets/carrousel20.jpg",
 ];
 
