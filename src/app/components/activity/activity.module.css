@@ -19,7 +19,7 @@
     align-items: center;
     padding: 10px;
     cursor:pointer;
-    transition: transform 1s ease, box-shadow 1s ease; 
+    transition: all 1s ease,; 
     transform: translateZ(0); 
     perspective: 1000px;
 }
