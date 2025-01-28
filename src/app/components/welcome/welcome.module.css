@@ -34,10 +34,11 @@
 }
 
 .subTitle{
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-top: 10px;
     margin-bottom: 70px;
-    font-weight: 200;
+    font-weight: 600;
+    letter-spacing: 5px;
     color:#000;
     z-index:99;
     overflow: hidden;
@@ -49,8 +50,8 @@
 
 .title{
     font-size: 2.2rem;
-    letter-spacing: 27px;
-    font-weight: bolder;
+    letter-spacing: 29px;
+    font-weight: 900;
     margin-top: 20px;
     color: #000;
     z-index:99;
@@ -118,16 +119,17 @@
         
     }
     .title{
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         letter-spacing: 10px;
         font-weight: bolder;
         margin-top: 20px;
     }
     
     .subTitle{
-        font-size: 1rem;
+        font-size: 0.8rem;
         margin-top: 10px;
         margin-bottom: 50px;
+        letter-spacing: 0;
     }
     .filigrane{
         display: none;

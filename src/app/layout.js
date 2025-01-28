@@ -1,20 +1,11 @@
-import { Geist, Geist_Mono,Montserrat } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 const montserrat = Montserrat({
+  subsets: ["latin"], 
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   variable: "--font-montserrat",
-  subsets: ["latin"],
-  weight: ["100", "700"], // Spécifie les poids nécessaires (ex: Regular et Bold)
 });
 
 export const metadata = {
@@ -24,8 +15,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${montserrat}`}>
+    <html lang="fr">
+      <body className={montserrat.className}>
         {children}
       </body>
     </html>

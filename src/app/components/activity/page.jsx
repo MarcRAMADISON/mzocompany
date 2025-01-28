@@ -11,12 +11,14 @@ function Activity() {
           return (
             <ScrollAppear key={index}>
               <div className={style.activityCard}>
+              <div style={{ position: "relative", width: "100%", height: "100px" }}>
                 <Image
                   src={activity.logoUrl}
                   alt="logo mzo activity"
-                  width={150}
-                  height={100}
+                  layout="fill"
+                  objectFit="contain"
                 />
+                </div>
                 <h5 className={style.description}>{activity.descritption}</h5>
                 <Image
                   src={activity.illustrationUrl}

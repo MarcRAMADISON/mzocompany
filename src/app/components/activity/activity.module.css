@@ -32,8 +32,12 @@
 .description{
     color:#000;
     margin-top: 60px;
+    font-weight: 500;
     font-size: 1rem;
-    font-family: 'montserrat' sans-serif;
+    word-spacing: 10px;
+    letter-spacing: 1px;
+    min-height: 145px;
+    font-family: var(--font-montserrat);
 }
 
 @media (max-width:1366px) and (min-width:1081px){
