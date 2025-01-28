@@ -176,13 +176,22 @@ function MenuBar() {
         >
           {listActivity.map((activity, index) => {
             return (
-              <Image
+              <div
                 key={index}
-                src={activity.logoUrl}
-                width={120}
-                height={70}
-                alt="logo mzo activity"
-              />
+                style={{
+                  position: "relative",
+                  width: "100px",
+                  height: "90px",
+                  cursor:'pointer'
+                }}
+              >
+                <Image
+                  src={activity.logoUrl}
+                  alt="logo mzo activity"
+                  layout="fill"
+                  objectFit="contain"
+                />
+              </div>
             );
           })}
         </div>
