@@ -44,6 +44,10 @@ a {
   text-align: center;
 }
 
+.react-multi-carousel-track{  
+  margin-left: 20px !important;
+}
+
 .pageDoteContainer {
   display: flex;
   justify-content: space-between;
