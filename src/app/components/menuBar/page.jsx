@@ -178,12 +178,7 @@ function MenuBar() {
             return (
               <div
                 key={index}
-                style={{
-                  position: "relative",
-                  width: "100px",
-                  height: "90px",
-                  cursor:'pointer'
-                }}
+                className={style.activityItem}
               >
                 <Image
                   src={activity.logoUrl}
