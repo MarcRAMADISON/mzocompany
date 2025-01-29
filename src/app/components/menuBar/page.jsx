@@ -3,7 +3,7 @@
 import { listActivity } from "@/app/utils";
 import style from "./menuBar.module.css";
 import Image from "next/image";
-import { useState,useRef,useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import { listSocialMedia } from "@/app/utils";
 
 function MenuBar() {
@@ -28,11 +28,11 @@ function MenuBar() {
       !activityButtonRef.current.contains(event.target)
     ) {
       sousMenuContact.style.height = "0";
-      sousMenuContact.style.opacity = "0"; 
+      sousMenuContact.style.opacity = "0";
       sousMenu.style.height = "0px";
       sousMenu.style.opacity = "0";
       setToggleActivity(false);
-      setToggleContact(false)
+      setToggleContact(false);
     }
   };
 
@@ -103,10 +103,10 @@ function MenuBar() {
 
     setToggleContact((prev) => {
       if (prev) {
-        sousMenu.style.height = "0px";
+        sousMenu.style.height = "0px"
         sousMenu.style.opacity = "0";
       } else {
-        sousMenu.style.height = "150px";
+        sousMenu.style.height = "390px"
         sousMenu.style.opacity = "1";
       }
 
@@ -144,22 +144,46 @@ function MenuBar() {
                 <div className={style.arrow_down}></div>
               )}
             </div>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                cursor: "pointer",
-              }}
-              id="activity"
-              onClick={handleContactClick}
-              ref={contactButtonRef}
-            >
-              <h5 className={style.activity}>Contact</h5>
-              {toggleContact ? (
-                <div className={style.arrow_up}></div>
-              ) : (
-                <div className={style.arrow_down}></div>
-              )}
+            <div className={style.contactContainer}>
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  cursor: "pointer",
+                  zIndex:"999"
+                }}
+                id="activity"
+                onClick={handleContactClick}
+                ref={contactButtonRef}
+              >
+                <h5 className={style.activity}>Contact</h5>
+                {toggleContact ? (
+                  <div className={style.arrow_up}></div>
+                ) : (
+                  <div className={style.arrow_down}></div>
+                )}
+              </div>
+              <div
+                className={style.sous_menu_contact}
+                id="sousMenuContact"
+                ref={contactRef}
+              >
+                {listSocialMedia.map((media, index) => {
+                  return (
+                    <div style={{display:"flex",alignItems:"center"}} key={index}>
+                    <Image
+                      src={media.urlImage}
+                      width={40}
+                      height={40}
+                      alt="social media link image"
+                    />
+                    <span className={style.contactValue}>{media.value}</span>
+                    </div>
+                  );
+                })}
+                <Image style={{marginTop:"50px",placeSelf:'center'}} src="/assets/mzo_logo_black.png" alt="logo mzo company" width={120} height={80}/>
+                <span className={style.contactValue} style={{placeSelf:"center",marginTop:"50px"}}>copyright (c) 2025</span>
+              </div>
             </div>
             <div className={style.doteContainer}>
               <div className={style.dote}></div>
@@ -176,10 +200,7 @@ function MenuBar() {
         >
           {listActivity.map((activity, index) => {
             return (
-              <div
-                key={index}
-                className={style.activityItem}
-              >
+              <div key={index} className={style.activityItem}>
                 <Image
                   src={activity.logoUrl}
                   alt="logo mzo activity"
@@ -187,24 +208,6 @@ function MenuBar() {
                   objectFit="contain"
                 />
               </div>
-            );
-          })}
-        </div>
-        <div
-          style={{ justifyContent: "center" }}
-          className={style.sous_menu}
-          id="sousMenuContact"
-          ref={contactRef}
-        >
-          {listSocialMedia.map((media, index) => {
-            return (
-              <Image
-                key={index}
-                src={media.urlImage}
-                width={70}
-                height={70}
-                alt="social media link image"
-              />
             );
           })}
         </div>
@@ -229,15 +232,30 @@ function MenuBar() {
           </div>
         </div>
         <div className={style.menuBlock} id="menuBlockId">
-          <h5 className={style.menuItem} style={{marginTop:"30px", color: "#010029"}}>Acceuil</h5>
-          <h5 className={style.menuItem} style={{ marginTop: "20px",paddingTop:"10px",color: "#010029",borderTop:"1px solid #010029",width:'90%',textAlign:"center" }}>
+          <h5
+            className={style.menuItem}
+            style={{ marginTop: "30px", color: "#010029" }}
+          >
+            Acceuil
+          </h5>
+          <h5
+            className={style.menuItem}
+            style={{
+              marginTop: "20px",
+              paddingTop: "10px",
+              color: "#010029",
+              borderTop: "1px solid #010029",
+              width: "90%",
+              textAlign: "center",
+            }}
+          >
             Activités
           </h5>
           <div
             style={{
               display: "flex",
-              justifyContent:'space-around',
-              marginRight:'20px',
+              justifyContent: "space-around",
+              marginRight: "20px",
               width: "100%",
             }}
           >
@@ -253,7 +271,17 @@ function MenuBar() {
               );
             })}
           </div>
-          <h5 className={style.menuItem} style={{ marginTop: "20px",paddingTop:"10px",color: "#010029",borderTop:"1px solid #010029",width:'90%',textAlign:"center" }}>
+          <h5
+            className={style.menuItem}
+            style={{
+              marginTop: "20px",
+              paddingTop: "10px",
+              color: "#010029",
+              borderTop: "1px solid #010029",
+              width: "90%",
+              textAlign: "center",
+            }}
+          >
             Contact
           </h5>
           <div
