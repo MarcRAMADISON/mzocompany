@@ -236,4 +236,8 @@
   .container {
     display: none;
   }
+  .contactFloatBlock{
+    bottom:50px;
+    right:20px;
+  }
 }
