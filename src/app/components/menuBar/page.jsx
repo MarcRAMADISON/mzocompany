@@ -133,15 +133,13 @@ function MenuBar() {
 
     const floatContact = document.querySelector("#floatContact");
 
-    console.log('sqdqsdqsdq')
-
    
     setToggleFloatContact((prev) => {
       if (prev) {
         floatContact.style.height = "0px";
         floatContact.style.opacity = "0";
       } else {
-        floatContact.style.height = "200px";
+        floatContact.style.height = "180px";
         floatContact.style.opacity = "1";
       }
 
