@@ -10,11 +10,14 @@ function MenuBar() {
   const [toggleMobile, setToggleMobile] = useState(false);
   const [toggleActivity, setToggleActivity] = useState(false);
   const [toggleContact, setToggleContact] = useState(false);
+  const [toggleFloatContact, setToggleFloatContact] = useState(false);
 
   const activityRef = useRef(null);
   const contactRef = useRef(null);
   const contactButtonRef = useRef(null);
   const activityButtonRef = useRef(null);
+  const floatButtonRef = useRef(null);
+  const floatRef = useRef(null);
 
   const handleClickOutside = (event) => {
     if (
@@ -25,14 +28,23 @@ function MenuBar() {
       contactButtonRef.current &&
       !contactButtonRef.current.contains(event.target) &&
       activityButtonRef.current &&
-      !activityButtonRef.current.contains(event.target)
+      !activityButtonRef.current.contains(event.target) &&
+      floatButtonRef.current &&
+      !floatButtonRef.current.contains(event.target) &&
+      floatRef.current &&
+      !floatRef.current.contains(event.target)
     ) {
+      const floatContact = document.querySelector("#floatContact");
+
       sousMenuContact.style.height = "0";
       sousMenuContact.style.opacity = "0";
       sousMenu.style.height = "0px";
       sousMenu.style.opacity = "0";
+      floatContact.style.height = "0px";
+      floatContact.style.opacity = "0";
       setToggleActivity(false);
       setToggleContact(false);
+      setToggleFloatContact(false);
     }
   };
 
@@ -103,11 +115,34 @@ function MenuBar() {
 
     setToggleContact((prev) => {
       if (prev) {
-        sousMenu.style.height = "0px"
+        sousMenu.style.height = "0px";
         sousMenu.style.opacity = "0";
       } else {
-        sousMenu.style.height = "390px"
+        sousMenu.style.height = "390px";
         sousMenu.style.opacity = "1";
+      }
+
+      return !prev;
+    });
+  };
+
+  const handleToggleFloatContact = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+
+
+    const floatContact = document.querySelector("#floatContact");
+
+    console.log('sqdqsdqsdq')
+
+   
+    setToggleFloatContact((prev) => {
+      if (prev) {
+        floatContact.style.height = "0px";
+        floatContact.style.opacity = "0";
+      } else {
+        floatContact.style.height = "200px";
+        floatContact.style.opacity = "1";
       }
 
       return !prev;
@@ -116,6 +151,51 @@ function MenuBar() {
 
   return (
     <div>
+      <div className={style.contactFloatBlock}>
+        <div
+          className={style.contactFloatMenu}
+          id="floatContact"
+          ref={floatRef}
+        >
+          {listSocialMedia.map((media, index) => {
+            return (
+              <Image
+                key={index}
+                src={media.urlImage}
+                width={40}
+                height={40}
+                alt="social media link image"
+              />
+            );
+          })}
+        </div>
+        <button
+          onClick={handleToggleFloatContact}
+          style={{
+            background: "#fff",
+            border: "none",
+            padding: 0,
+            cursor: "pointer",
+            borderRadius:"50%",
+            display:"flex",
+            height:"60px",
+            width:"60px"
+          }}
+          ref={floatButtonRef}
+        >
+          <Image
+            src="/assets/contact_person.png"
+            alt="contact person"
+            height={60}
+            width={60}
+            style={{
+              boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
+              borderRadius: "50%",
+            }}
+           
+          />
+        </button>
+      </div>
       <div style={{ display: "flex", flexDirection: "column" }}>
         <div className={style.container}>
           <Image
@@ -150,7 +230,7 @@ function MenuBar() {
                   display: "flex",
                   alignItems: "center",
                   cursor: "pointer",
-                  zIndex:"999"
+                  zIndex: "999",
                 }}
                 id="activity"
                 onClick={handleContactClick}
@@ -170,19 +250,33 @@ function MenuBar() {
               >
                 {listSocialMedia.map((media, index) => {
                   return (
-                    <div style={{display:"flex",alignItems:"center"}} key={index}>
-                    <Image
-                      src={media.urlImage}
-                      width={40}
-                      height={40}
-                      alt="social media link image"
-                    />
-                    <span className={style.contactValue}>{media.value}</span>
+                    <div
+                      style={{ display: "flex", alignItems: "center", marginTop:"5px" }}
+                      key={index}
+                    >
+                      <Image
+                        src={media.urlImage}
+                        width={40}
+                        height={40}
+                        alt="social media link image"
+                      />
+                      <span className={style.contactValue}>{media.value}</span>
                     </div>
                   );
                 })}
-                <Image style={{marginTop:"50px",placeSelf:'center'}} src="/assets/mzo_logo_black.png" alt="logo mzo company" width={120} height={80}/>
-                <span className={style.contactValue} style={{placeSelf:"center",marginTop:"50px"}}>copyright (c) 2025</span>
+                <Image
+                  style={{ marginTop: "50px", placeSelf: "center" }}
+                  src="/assets/mzo_logo_black.png"
+                  alt="logo mzo company"
+                  width={120}
+                  height={80}
+                />
+                <span
+                  className={style.contactValue}
+                  style={{ placeSelf: "center", marginTop: "50px" }}
+                >
+                  copyright (c) 2025
+                </span>
               </div>
             </div>
             <div className={style.doteContainer}>
