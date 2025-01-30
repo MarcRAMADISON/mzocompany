@@ -156,7 +156,7 @@ function MenuBar() {
         >
           {listSocialMedia.map((media, index) => {
             return (
-              <Link href={media.url} target="_blank" key={index}>
+              <Link href={media.url} target="_blank" key={index} rel="noopener noreferrer">
                 <Image
                   src={media.urlImage}
                   width={40}
@@ -247,7 +247,7 @@ function MenuBar() {
               >
                 {listSocialMedia.map((media, index) => {
                   return (
-                    <Link key={index} href={media.url} target="_blank">
+                    <Link key={index} href={media.url} target="_blank" rel="noopener noreferrer">
                       <div
                         style={{
                           display: "flex",
@@ -388,7 +388,7 @@ function MenuBar() {
           >
             {listSocialMedia.map((media, index) => {
               return (
-                <Link href={media.url} target="_blank" key={index}>
+                <Link href={media.url} target="_blank" key={index} rel="noopener noreferrer">
                   <Image
                     src={media.urlImage}
                     width={50}
