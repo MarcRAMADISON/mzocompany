@@ -5,6 +5,7 @@ import style from "./menuBar.module.css";
 import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
 import { listSocialMedia } from "@/app/utils";
+import Link from "next/link";
 
 function MenuBar() {
   const [toggleMobile, setToggleMobile] = useState(false);
@@ -130,10 +131,8 @@ function MenuBar() {
     e.preventDefault();
     e.stopPropagation();
 
-
     const floatContact = document.querySelector("#floatContact");
 
-   
     setToggleFloatContact((prev) => {
       if (prev) {
         floatContact.style.height = "0px";
@@ -157,13 +156,15 @@ function MenuBar() {
         >
           {listSocialMedia.map((media, index) => {
             return (
-              <Image
-                key={index}
-                src={media.urlImage}
-                width={40}
-                height={40}
-                alt="social media link image"
-              />
+              <Link href={media.url} target="_blank">
+                <Image
+                  key={index}
+                  src={media.urlImage}
+                  width={40}
+                  height={40}
+                  alt="social media link image"
+                />
+              </Link>
             );
           })}
         </div>
@@ -174,10 +175,10 @@ function MenuBar() {
             border: "none",
             padding: 0,
             cursor: "pointer",
-            borderRadius:"50%",
-            display:"flex",
-            height:"60px",
-            width:"60px"
+            borderRadius: "50%",
+            display: "flex",
+            height: "60px",
+            width: "60px",
           }}
           ref={floatButtonRef}
         >
@@ -190,7 +191,6 @@ function MenuBar() {
               boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
               borderRadius: "50%",
             }}
-           
           />
         </button>
       </div>
@@ -248,18 +248,27 @@ function MenuBar() {
               >
                 {listSocialMedia.map((media, index) => {
                   return (
-                    <div
-                      style={{ display: "flex", alignItems: "center", marginTop:"5px" }}
-                      key={index}
-                    >
-                      <Image
-                        src={media.urlImage}
-                        width={40}
-                        height={40}
-                        alt="social media link image"
-                      />
-                      <span className={style.contactValue}>{media.value}</span>
-                    </div>
+                    <Link href={media.url} target="_blank">
+                      <div
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          marginTop: "5px",
+                          cursor: "pointer",
+                        }}
+                        key={index}
+                      >
+                        <Image
+                          src={media.urlImage}
+                          width={40}
+                          height={40}
+                          alt="social media link image"
+                        />
+                        <span className={style.contactValue}>
+                          {media.value}
+                        </span>
+                      </div>
+                    </Link>
                   );
                 })}
                 <Image
@@ -381,13 +390,15 @@ function MenuBar() {
           >
             {listSocialMedia.map((media, index) => {
               return (
-                <Image
-                  key={index}
-                  src={media.urlImage}
-                  width={50}
-                  height={50}
-                  alt="logo mzo activity"
-                />
+                <Link href={media.url} target="_blank">
+                  <Image
+                    key={index}
+                    src={media.urlImage}
+                    width={50}
+                    height={50}
+                    alt="logo mzo activity"
+                  />
+                </Link>
               );
             })}
           </div>

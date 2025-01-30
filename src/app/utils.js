@@ -32,8 +32,8 @@ export const listActivity = [
   ];
 
   export const listSocialMedia=[
-    {url:"",urlImage:"/assets/facebook.png",name:'FACEBOOK',value:"MZO CONTACT"},
+    {url:"https://www.facebook.com/story.php?story_fbid=122129788586531382&id=61565941471993",urlImage:"/assets/facebook.png",name:'FACEBOOK',value:"MZO CONTACT"},
     {url:"",urlImage:"/assets/linkedin.png",name:'LINKEDIN',value:"MZO CONTACT"},
-    {url:"",urlImage:"/assets/watsapp.png",name:"WATSAPP",value:"+261 38 93 659 78"}
+    {url:"https://wa.me/261389365978",urlImage:"/assets/watsapp.png",name:"WATSAPP",value:"+261 38 93 659 78"}
   ]
   
