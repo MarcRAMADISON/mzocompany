@@ -156,9 +156,8 @@ function MenuBar() {
         >
           {listSocialMedia.map((media, index) => {
             return (
-              <Link href={media.url} target="_blank">
+              <Link href={media.url} target="_blank" key={index}>
                 <Image
-                  key={index}
                   src={media.urlImage}
                   width={40}
                   height={40}
@@ -248,7 +247,7 @@ function MenuBar() {
               >
                 {listSocialMedia.map((media, index) => {
                   return (
-                    <Link href={media.url} target="_blank">
+                    <Link key={index} href={media.url} target="_blank">
                       <div
                         style={{
                           display: "flex",
@@ -256,7 +255,6 @@ function MenuBar() {
                           marginTop: "5px",
                           cursor: "pointer",
                         }}
-                        key={index}
                       >
                         <Image
                           src={media.urlImage}
@@ -390,9 +388,8 @@ function MenuBar() {
           >
             {listSocialMedia.map((media, index) => {
               return (
-                <Link href={media.url} target="_blank">
+                <Link href={media.url} target="_blank" key={index}>
                   <Image
-                    key={index}
                     src={media.urlImage}
                     width={50}
                     height={50}
