@@ -73,7 +73,7 @@ function MenuBar() {
         spans[0].style.transform = "translateY(13px) rotate(45deg)";
         spans[1].style.opacity = "0";
         spans[2].style.transform = "translateY(-13px) rotate(-45deg)";
-        idMenu.style.height = "300px";
+        idMenu.style.height = "400px";
         idMenu.style.opacity = "1";
       }
 
@@ -352,21 +352,19 @@ function MenuBar() {
           </h5>
           <div
             style={{
-              display: "flex",
-              justifyContent: "space-around",
+              display: "grid",
+              gridTemplateColumns:"repeat(2,1fr)",
+              gap:"25px",
               marginRight: "20px",
-              width: "100%",
+              width: "90%",
+              placeItems:"center",
+              textAlign:"left",
+              margin:"0px 30px 0px 20px"
             }}
           >
             {listActivity.map((activity, index) => {
               return (
-                <Image
-                  key={index}
-                  src={activity.logoUrl}
-                  width={50}
-                  height={40}
-                  alt="logo mzo activity"
-                />
+                <span key={index} className={style.activityItemMobile}>{activity.name}</span>
               );
             })}
           </div>

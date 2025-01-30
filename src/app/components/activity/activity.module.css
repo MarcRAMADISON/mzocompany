@@ -61,7 +61,7 @@
     }
 }
 
-@media (max-width:1080px) and (min-width:371px){
+@media (max-width:1080px) and (min-width:464px){
     .activityBlock{
         grid-template-columns: repeat(2,1fr);
         margin-bottom: 100px;

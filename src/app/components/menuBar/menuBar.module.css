@@ -6,9 +6,9 @@
   width: 100vw;
   height: 100px;
   position: fixed;
-  top:0;
-  left:0;
-  z-index:999
+  top: 0;
+  left: 0;
+  z-index: 999
 }
 
 .logo {
@@ -65,7 +65,7 @@
   transition: all 0.5s ease-in;
   background-color: rgba(250, 250, 250, 1);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  z-index:999
+  z-index: 999
 }
 
 .burger_menu {
@@ -111,9 +111,9 @@
   width: 100%;
   height: 80px;
   position: fixed;
-  top:0;
-  left:0;
-  z-index:999
+  top: 0;
+  left: 0;
+  z-index: 999
 }
 
 .menuBlock {
@@ -123,13 +123,13 @@
   justify-content: space-around;
   width: 100%;
   height: 0;
-  opacity:0;
+  opacity: 0;
   transition: all 0.5s ease-in;
   background-color: rgba(250, 250, 250, 1);
   margin-top: 20px;
   position: fixed;
-  top:60px;
-  left:0;
+  top: 60px;
+  left: 0;
   z-index: 999;
 }
 
@@ -156,29 +156,29 @@
   display: none;
 }
 
-.activityItem{
+.activityItem {
   position: relative;
   width: 100px;
   height: 90px;
-  cursor:pointer;
+  cursor: pointer;
   transition: transform 0.6s ease, box-shadow 0.6s ease;
-  transform: translateZ(0); 
+  transform: translateZ(0);
   perspective: 1000px;
 }
 
-.activityItem:hover{
-  transform: translateZ(40px) scale(1.1); 
-    text-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+.activityItem:hover {
+  transform: translateZ(40px) scale(1.1);
+  text-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
 
-.contactContainer{
-  position:relative;
+.contactContainer {
+  position: relative;
 }
 
-.sous_menu_contact{
-  position:absolute;
-  top:60px;
-  left:-50px;
+.sous_menu_contact {
+  position: absolute;
+  top: 60px;
+  left: -50px;
   display: flex;
   flex-direction: column;
   width: 270px;
@@ -186,20 +186,20 @@
   opacity: 0;
   transition: all 1s ease-in;
   background-color: rgba(250, 250, 250, 1);
-  z-index:99;
+  z-index: 99;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 30px;
   padding: 50px 20px;
 }
 
-.contactValue{
+.contactValue {
   font-weight: 500;
   font-size: 1rem;
-  color:#000;
+  color: #000;
   margin-left: 10px;
 }
 
-.contactFloatBlock{
+.contactFloatBlock {
   position: fixed;
   bottom: 100px;
   right: 50px;
@@ -209,7 +209,7 @@
   flex-direction: column;
 }
 
-.contactFloatMenu{
+.contactFloatMenu {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -217,13 +217,20 @@
   background-color: #fff;
   border-radius: 30px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  width:60px;
+  width: 60px;
   height: 0px;
-  opacity:0;
+  opacity: 0;
   margin-bottom: 10px;
   transition: all 1s ease-in;
   z-index: 999;
   overflow: hidden;
+}
+
+.activityItemMobile {
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-align: center
 }
 
 
@@ -231,13 +238,15 @@
 
   .mobileBlock {
     display: block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
 
   .container {
     display: none;
   }
-  .contactFloatBlock{
-    bottom:50px;
-    right:20px;
+
+  .contactFloatBlock {
+    bottom: 50px;
+    right: 20px;
   }
 }
