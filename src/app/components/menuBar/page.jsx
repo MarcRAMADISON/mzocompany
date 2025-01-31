@@ -6,12 +6,14 @@ import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
 import { listSocialMedia } from "@/app/utils";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 function MenuBar() {
   const [toggleMobile, setToggleMobile] = useState(false);
   const [toggleActivity, setToggleActivity] = useState(false);
   const [toggleContact, setToggleContact] = useState(false);
   const [toggleFloatContact, setToggleFloatContact] = useState(false);
+  const router = useRouter();
 
   const activityRef = useRef(null);
   const contactRef = useRef(null);
@@ -156,7 +158,12 @@ function MenuBar() {
         >
           {listSocialMedia.map((media, index) => {
             return (
-              <Link href={media.url} target="_blank" key={index} rel="noopener noreferrer">
+              <Link
+                href={media.url}
+                target="_blank"
+                key={index}
+                rel="noopener noreferrer"
+              >
                 <Image
                   src={media.urlImage}
                   width={40}
@@ -203,7 +210,9 @@ function MenuBar() {
             height={80}
           />
           <div className={style.menuItems}>
-            <h5 className={style.menuItem}>Acceuil</h5>
+            <h5 className={style.menuItem} onClick={() => router.push("/")}>
+              Acceuil
+            </h5>
             <div
               style={{
                 display: "flex",
@@ -247,7 +256,12 @@ function MenuBar() {
               >
                 {listSocialMedia.map((media, index) => {
                   return (
-                    <Link key={index} href={media.url} target="_blank" rel="noopener noreferrer">
+                    <Link
+                      key={index}
+                      href={media.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <div
                         style={{
                           display: "flex",
@@ -299,7 +313,11 @@ function MenuBar() {
         >
           {listActivity.map((activity, index) => {
             return (
-              <div key={index} className={style.activityItem}>
+              <div
+                key={index}
+                className={style.activityItem}
+                onClick={()=>router.push(`${activity.pageUrl}`)}
+              >
                 <Image
                   src={activity.logoUrl}
                   alt="logo mzo activity"
@@ -334,6 +352,7 @@ function MenuBar() {
           <h5
             className={style.menuItem}
             style={{ marginTop: "30px", color: "#010029" }}
+            onClick={() => router.push("/")}
           >
             Acceuil
           </h5>
@@ -353,18 +372,24 @@ function MenuBar() {
           <div
             style={{
               display: "grid",
-              gridTemplateColumns:"repeat(2,1fr)",
-              gap:"25px",
+              gridTemplateColumns: "repeat(2,1fr)",
+              gap: "25px",
               marginRight: "20px",
               width: "90%",
-              placeItems:"center",
-              textAlign:"left",
-              margin:"0px 30px 0px 20px"
+              placeItems: "center",
+              textAlign: "left",
+              margin: "0px 30px 0px 20px",
             }}
           >
             {listActivity.map((activity, index) => {
               return (
-                <span key={index} className={style.activityItemMobile}>{activity.name}</span>
+                <span
+                  key={index}
+                  className={style.activityItemMobile}
+                  onClick={()=>router.push(`${activity.pageUrl}`)}
+                >
+                  {activity.name}
+                </span>
               );
             })}
           </div>
@@ -386,7 +411,12 @@ function MenuBar() {
           >
             {listSocialMedia.map((media, index) => {
               return (
-                <Link href={media.url} target="_blank" key={index} rel="noopener noreferrer">
+                <Link
+                  href={media.url}
+                  target="_blank"
+                  key={index}
+                  rel="noopener noreferrer"
+                >
                   <Image
                     src={media.urlImage}
                     width={50}

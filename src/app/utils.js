@@ -5,6 +5,7 @@ export const listActivity = [
       illustrationUrl: "/assets/mzo_online.png",
       descritption:
         "Découvrez Mi-Zesta Online, notre boutique de mode en ligne, avec des collections pour toute la famille et des ventes en direct sur les réseaux sociaux.",
+        pageUrl:'/mizestaOnline'
     },
     {
       name:"MZO Contact Center",
@@ -12,6 +13,7 @@ export const listActivity = [
       illustrationUrl: "/assets/mzo_contact.png",
       descritption:
         "Optimisez vos performances avec MZO Contact Center, expert en externalisation et offshoring",
+        pageUrl:'/contactCenter'
     },
     {
       name:"MZO Starlink Provider",
@@ -19,6 +21,7 @@ export const listActivity = [
       illustrationUrl: "/assets/mzo_provider.png",
       descritption:
         "Profitez d’une connectivité satellitaire fiable, même dans les zones reculées, grâce à MZO Starlink Provider.",
+        pageUrl:'/starlinkProvider'
     },
     {
       name:'MZO Event',
@@ -26,6 +29,7 @@ export const listActivity = [
       illustrationUrl: "/assets/mzo_event.png",
       descritption:
         "Transformez vos festivités en événements inoubliables avec MZO Event et ses solutions clé en main.",
+        pageUrl:'/event'
     },
     {
       name:"MZO Business",
@@ -33,6 +37,7 @@ export const listActivity = [
       illustrationUrl: "/assets/mzo_business.png",
       descritption:
         "Simplifiez vos échanges commerciaux entre la Chine et Madagascar avec MZO Business et ses services d'importation et transit sur mesure.",
+        pageUrl:'/business'
     },
   ];
 

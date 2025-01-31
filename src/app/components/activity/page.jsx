@@ -1,16 +1,21 @@
+'use client'
+
 import style from "./activity.module.css";
 import Image from "next/image";
 import { listActivity } from "@/app/utils";
 import ScrollAppear from "../scrollAppear/page";
+import { useRouter } from "next/navigation";
 
 function Activity() {
+  const router=useRouter()
+
   return (
     <div className={style.container}>
       <div className={style.activityBlock}>
         {listActivity.map((activity, index) => {
           return (
             <ScrollAppear key={index}>
-              <div className={style.activityCard}>
+              <div className={style.activityCard} onClick={()=>router.push(`${activity.pageUrl}`)}>
                 <div
                   style={{
                     position: "relative",
