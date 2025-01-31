@@ -1,5 +1,10 @@
+import MenuBar from "../components/menuBar/page";
+
+
 function MizestaOnlinePage() {
-    return ( <div></div> );
+    return ( <div>
+        <MenuBar/>
+    </div> );
 }
 
 export default MizestaOnlinePage;

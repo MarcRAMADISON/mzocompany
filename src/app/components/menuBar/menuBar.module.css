@@ -65,7 +65,8 @@
   transition: all 0.5s ease-in;
   background-color: rgba(250, 250, 250, 1);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  z-index: 999
+  z-index: 999;
+  overflow: hidden;
 }
 
 .burger_menu {
@@ -131,6 +132,8 @@
   top: 60px;
   left: 0;
   z-index: 999;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .arrow_down {

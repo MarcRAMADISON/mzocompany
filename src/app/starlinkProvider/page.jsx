@@ -1,5 +1,9 @@
+import MenuBar from "../components/menuBar/page";
+
 function StarlinkProviderPage() {
-    return ( <div></div> );
+    return ( <div>
+        <MenuBar/>
+    </div> );
 }
 
 export default StarlinkProviderPage;
