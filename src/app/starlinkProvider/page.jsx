@@ -14,9 +14,7 @@ function StarlinkProviderPage() {
           height={920}
           className={styles.filigrane}
         />
-        <div
-          className={styles.logoMzo}
-        >
+        <div className={styles.logoMzo}>
           <Image
             src="/assets/logo_provider.png"
             alt="logo mzo starlink provider"
@@ -36,9 +34,7 @@ function StarlinkProviderPage() {
       </div>
       <div className={styles.secondContainer}>
         <span className={styles.title}>Qui nous sommes ?</span>
-        <span
-          className={styles.aproposDescription}
-        >
+        <span className={styles.aproposDescription}>
           Distributeur Starlink <br />
           Solution télécom sur mesure
         </span>
@@ -110,21 +106,59 @@ function StarlinkProviderPage() {
             <span
               style={{ color: "#000", marginLeft: "1rem", fontSize: "1.1rem" }}
             >
-              Particuliers, Entreprises privées, Entités publiques, Organisations et associations, Universités et Grandes écoles
+              Particuliers, Entreprises privées, Entités publiques,
+              Organisations et associations, Universités et Grandes écoles
             </span>
           </li>
           <li>
-          <span style={{ marginBottom: "20px", fontSize: "1.3rem" }}>
-            INTERLOCUTEURS
+            <span style={{ marginBottom: "20px", fontSize: "1.3rem" }}>
+              INTERLOCUTEURS
             </span>
             <br />
             <span
               style={{ color: "#000", marginLeft: "1rem", fontSize: "1.1rem" }}
             >
-              Particulier, Responsable communication, Directeur technique, Résponsable technique, Gérant, Décisionnaire...
+              Particulier, Responsable communication, Directeur technique,
+              Résponsable technique, Gérant, Décisionnaire...
             </span>
           </li>
         </ul>
+      </div>
+      <div className={styles.thirdContainer}>
+        <span
+          style={{ color: "#ff8c00", margin: "50px 0px 10px 0px" }}
+          className={styles.serviceTitle}
+        >
+          OFFRE STARLINK PARTICULIER
+        </span>
+        <div className="pageDoteContainer">
+          <div className="pageDote"></div>
+          <div className="pageDote"></div>
+          <div className="pageDote"></div>
+        </div>
+        <span className={styles.titleDescription}>RESIDENTIEL</span>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "flex-end",
+            justifyContent: "center",
+            marginTop: "0px",
+          }}
+        >
+          <span className={styles.price}>226.000 AR</span>
+          <span
+            style={{ color: "#ff8c00", fontSize: "1.1rem",fontWeight:'400',marginTop:'0px' }}
+            className={styles.titleDescription}
+          >
+            /MOIS
+          </span>
+        </div>
+        <span
+          style={{ color: "#000", fontSize: "1.1rem",fontWeight:'400',marginTop:'0px' }}
+          className={styles.titleDescription}
+        >
+          Données illimitées / Sans engagement
+        </span>
       </div>
     </div>
   );
