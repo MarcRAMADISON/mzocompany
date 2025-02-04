@@ -51,6 +51,7 @@ a {
   place-self: center;
   margin-top: 50px;
   margin-left: 100px;
+  z-index: 99;
 }
 
 .pageDote {

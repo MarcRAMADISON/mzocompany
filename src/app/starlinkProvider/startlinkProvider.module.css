@@ -1,0 +1,165 @@
+.firstContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 920px;
+}
+
+.secondContainer {
+    margin: 15vh 0vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titleDescription {
+    margin-top: 60px;
+    font-weight: 500;
+    font-size: 2.4rem;
+    max-width: 900px;
+    text-align: center;
+    z-index: 99;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 3rem;
+    text-align: center;
+    z-index: 99;
+}
+
+ul.list_dash {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    width: 60%;
+    margin-top: 30px;
+}
+
+ul.list_dash li::before {
+    content: "— ";
+    color: #000;
+    font-weight: bold;
+    width: 0px;
+}
+
+ul.list_dash li {
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+ul.list_arrow {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 40px;
+    column-gap: 50px;
+    list-style: none;
+    padding: 0;
+    margin-top: 80px;
+    width: 60%;
+}
+
+ul.list_arrow li::before {
+    content: "➤";
+    /* Flèche Unicode */
+    color: #ff8c00;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+ul.list_arrow li {
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: #ff8c00;
+}
+
+
+
+.filigrane {
+    position: absolute;
+    width: 80vw;
+    height: auto;
+    z-index: 0;
+    animation: heartbeat 3s infinite ease-in-out;
+}
+
+.logoMzo {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin-bottom: -50px;
+}
+
+.aproposDescription {
+    margin-top: 60px;
+    font-weight: 500;
+    font-size: 2rem;
+    max-width: 900px;
+    text-align: center;
+    z-index: 99;
+
+}
+
+.serviceTitle{
+    font-weight: 700;
+    font-size: 3rem;
+    text-align: center;
+    z-index: 99;
+}
+
+@media (max-width:1080px) {
+    .firstContainer{
+        max-height:400px;
+        margin:-90px 0px
+    }
+    .logoMzo {
+        width: 40vw;
+        height: 40vh;
+        margin: -70px 0px;
+        max-width: 400px;
+        max-height: 400px;
+    }
+
+    .titleDescription {
+        font-size: 1.5rem;
+        width:90%
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .serviceTitle{
+        font-size: 1.8rem;
+    }
+
+    ul.list_arrow {
+        grid-template-columns: 100%;
+        row-gap: 40px;
+        width: 90%;
+    }
+    .aproposDescription{
+        font-size: 1.5rem;
+    }
+    ul.list_dash {
+        width:90%;
+        font-size: 0.8rem;
+    }
+}
+
+@keyframes heartbeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+        /* Taille normale */
+    }
+
+    50% {
+        transform: scale(1.1);
+        /* Agrandissement au pic */
+    }
+}
