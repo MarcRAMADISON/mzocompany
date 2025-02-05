@@ -13,7 +13,7 @@
     align-items: center;
 }
 
-.thirdContainer{
+.thirdContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,13 +21,13 @@
     margin-bottom: 15vh;
 }
 
-.price{
+.price {
     font-weight: 500;
     font-size: 2.4rem;
     text-align: center;
     z-index: 99;
     color: #ff8c00;
-    width:'fit-content'
+    width: 'fit-content'
 }
 
 .titleDescription {
@@ -66,6 +66,51 @@ ul.list_dash li {
     font-size: 1.2rem;
     margin-top: 10px;
     text-transform: uppercase;
+}
+
+.offreContainer{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:70px
+}
+
+.offreDescription {
+    border: 1px solid #000;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10%;
+}
+
+.offreTitle{
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-top: 30px;
+}
+
+ul.list_dash2 {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    width: 100%;
+    margin-top: 30px;
+    padding: 0px 40px 20px 40px;
+}
+
+ul.list_dash2 li::before {
+    content: "— ";
+    color: #000;
+    font-weight: bold;
+    width: 0px;
+}
+
+ul.list_dash2 li {
+    font-weight: 400;
+    font-size: 1rem;
+    margin-top: 5px;
 }
 
 ul.list_arrow {
@@ -120,7 +165,7 @@ ul.list_arrow li {
 
 }
 
-.serviceTitle{
+.serviceTitle {
     font-weight: 700;
     font-size: 3rem;
     text-align: center;
@@ -128,10 +173,11 @@ ul.list_arrow li {
 }
 
 @media (max-width:1080px) {
-    .firstContainer{
-        max-height:400px;
-        margin:-90px 0px
+    .firstContainer {
+        max-height: 400px;
+        margin: -90px 0px
     }
+
     .logoMzo {
         width: 40vw;
         height: 40vh;
@@ -142,10 +188,10 @@ ul.list_arrow li {
 
     .titleDescription {
         font-size: 1.5rem;
-        width:90%
+        width: 90%
     }
 
-    .price{
+    .price {
         font-size: 1.5rem;
     }
 
@@ -153,7 +199,7 @@ ul.list_arrow li {
         font-size: 2rem;
     }
 
-    .serviceTitle{
+    .serviceTitle {
         font-size: 1.8rem;
     }
 
@@ -162,11 +208,13 @@ ul.list_arrow li {
         row-gap: 40px;
         width: 90%;
     }
-    .aproposDescription{
+
+    .aproposDescription {
         font-size: 1.5rem;
     }
+
     ul.list_dash {
-        width:90%;
+        width: 90%;
         font-size: 0.8rem;
     }
 }

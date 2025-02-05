@@ -147,18 +147,84 @@ function StarlinkProviderPage() {
         >
           <span className={styles.price}>226.000 AR</span>
           <span
-            style={{ color: "#ff8c00", fontSize: "1.1rem",fontWeight:'400',marginTop:'0px' }}
+            style={{
+              color: "#ff8c00",
+              fontSize: "1.1rem",
+              fontWeight: "400",
+              marginTop: "0px",
+            }}
             className={styles.titleDescription}
           >
             /MOIS
           </span>
         </div>
         <span
-          style={{ color: "#000", fontSize: "1.1rem",fontWeight:'400',marginTop:'0px' }}
+          style={{
+            color: "#000",
+            fontSize: "1.1rem",
+            fontWeight: "400",
+            marginTop: "0px",
+          }}
           className={styles.titleDescription}
         >
           Données illimitées / Sans engagement
         </span>
+        <div className={styles.offreContainer}>
+          <div>
+            <div
+              style={{
+                position: "relative",
+                width: "300px",
+                height: "300px",
+                marginBottom: "-80px",
+              }}
+            >
+              <Image
+                src="/assets/starlink-v4.png"
+                layout="fill"
+                objectFit="contain"
+                alt="starlink v4"
+              />
+            </div>
+            <div className={styles.offreDescription}>
+              <span className={styles.offreTitle}>STARLINK STANDARD V4</span>
+              <ul className={styles.list_dash2}>
+                <li>WI-FI 6</li>
+                <li>Débit ultra rapide 250 à 450 mbits/s</li>
+                <li>Connectez jusqu'à 235 appareils</li>
+                <li>Orientation manuelle</li>
+                <li>Deux (2) ports LAN Ethernet</li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div
+              style={{
+                position: "relative",
+                width: "300px",
+                height: "300px",
+                marginBottom: "-80px",
+              }}
+            >
+              <Image
+                src="/assets/starlink-v4.png"
+                layout="fill"
+                objectFit="contain"
+                alt="starlink v4"
+              />
+            </div>
+            <div className={styles.offreDescription}>
+              <span className={styles.offreTitle}>STARLINK STANDARD V4</span>
+              <ul className={styles.list_dash2}>
+                <li>WI-FI 6</li>
+                <li>Débit ultra rapide 250 à 450 mbits/s</li>
+                <li>Connectez jusqu'à 235 appareils</li>
+                <li>Orientation manuelle</li>
+                <li>Deux (2) ports LAN Ethernet</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
