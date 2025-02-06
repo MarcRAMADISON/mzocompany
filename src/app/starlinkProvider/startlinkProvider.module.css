@@ -68,10 +68,10 @@ ul.list_dash li {
     text-transform: uppercase;
 }
 
-.offreContainer{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap:70px
+.offreContainer,.fourthContainer{
+    display: flex;
+    flex-direction: column;
+    margin-top:10px
 }
 
 .offreDescription {
@@ -170,6 +170,71 @@ ul.list_arrow li {
     font-size: 3rem;
     text-align: center;
     z-index: 99;
+}
+
+.offreSecondContainer{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:70px;
+    margin-top:70px
+}
+
+.secondBlock, .firstBlock{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tarifCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width:90%;
+    border:#000 solid 1px;
+    padding: 20px;
+
+}
+
+.subTitleTarif{
+    font-size: 1.1rem;
+    color:#999;
+    margin: 30px 0px 10px 0px;
+    text-transform: uppercase;
+}
+
+.tarifContainer{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    place-self: center;
+    width:80%;
+    margin-top: 100px;
+}
+
+.détailTarif{
+    font-weight: 700;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+.lineTarif{
+    display: flex;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #000;
+    margin-top: 20px;
+    width: 100%;
+    justify-content:center;
+    align-items:flex-end
+}
+
+.fifteenContainer{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width:80%;
+    margin: 0 auto;
+    justify-items: center;
+    align-items: center; 
+    margin-bottom: 100px;
 }
 
 @media (max-width:1080px) {
