@@ -6,13 +6,6 @@
     min-height: 920px;
 }
 
-.secondContainer {
-    margin: 15vh 0vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .thirdContainer {
     display: flex;
     flex-direction: column;
@@ -46,32 +39,11 @@
     z-index: 99;
 }
 
-ul.list_dash {
-    list-style: none;
-    padding: 0;
-    text-align: left;
-    width: 60%;
-    margin-top: 30px;
-}
-
-ul.list_dash li::before {
-    content: "— ";
-    color: #000;
-    font-weight: bold;
-    width: 0px;
-}
-
-ul.list_dash li {
-    font-weight: 500;
-    font-size: 1.2rem;
-    margin-top: 10px;
-    text-transform: uppercase;
-}
-
-.offreContainer,.fourthContainer{
+.offreContainer,
+.fourthContainer {
     display: flex;
     flex-direction: column;
-    margin-top:10px
+    margin-top: 10px
 }
 
 .offreDescription {
@@ -85,7 +57,7 @@ ul.list_dash li {
     border-radius: 10%;
 }
 
-.offreTitle{
+.offreTitle {
     font-size: 1.2rem;
     font-weight: 700;
     margin-top: 30px;
@@ -113,30 +85,6 @@ ul.list_dash2 li {
     margin-top: 5px;
 }
 
-ul.list_arrow {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    row-gap: 40px;
-    column-gap: 50px;
-    list-style: none;
-    padding: 0;
-    margin-top: 80px;
-    width: 60%;
-}
-
-ul.list_arrow li::before {
-    content: "➤";
-    /* Flèche Unicode */
-    color: #ff8c00;
-    font-weight: bold;
-    margin-right: 8px;
-}
-
-ul.list_arrow li {
-    font-weight: 500;
-    font-size: 1.3rem;
-    color: #ff8c00;
-}
 
 
 
@@ -172,72 +120,147 @@ ul.list_arrow li {
     z-index: 99;
 }
 
-.offreSecondContainer{
-    display:grid;
-    grid-template-columns: repeat(2,1fr);
-    gap:70px;
-    margin-top:70px
+.offreSecondContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 70px;
+    margin-top: 70px
 }
 
-.secondBlock, .firstBlock{
+.secondBlock,
+.firstBlock {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.tarifCard{
+.tarifCard {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    width:90%;
-    border:#000 solid 1px;
+    width: 90%;
+    border: #000 solid 1px;
     padding: 20px;
 
 }
 
-.subTitleTarif{
+.subTitleTarif {
     font-size: 1.1rem;
-    color:#999;
+    color: #999;
     margin: 30px 0px 10px 0px;
     text-transform: uppercase;
 }
 
-.tarifContainer{
+.tarifContainer {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     place-self: center;
-    width:80%;
+    width: 80%;
     margin-top: 100px;
 }
 
-.détailTarif{
+.détailTarif {
     font-weight: 700;
     margin-top: 10px;
     font-size: 0.9rem;
 }
 
-.lineTarif{
+.lineTarif {
     display: flex;
     padding-bottom: 15px;
     border-bottom: 1px solid #000;
     margin-top: 20px;
     width: 100%;
-    justify-content:center;
-    align-items:flex-end
+    justify-content: center;
+    align-items: flex-end
 }
 
-.fifteenContainer{
+.fifteenContainer {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    width:80%;
+    grid-template-columns: repeat(2, 1fr);
+    width: 80%;
     margin: 0 auto;
     justify-items: center;
-    align-items: center; 
+    align-items: center;
     margin-bottom: 100px;
 }
 
+.starliknV4Container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 70px;
+    width: 100%;
+    margin-bottom: -20px;
+    align-items: center
+}
+
+.fifteenDescription {
+    font-size: 1.1rem;
+    margin-top: 20px;
+}
+
+.fifteenDetail{
+    font-size:1.1rem;
+    text-align: center;
+    line-height:40px
+}
+
 @media (max-width:1080px) {
+    .offreDescription {
+        width: 90vw
+    }
+
+    ul.list_dash li {
+        font-size: 1rem;
+    }
+
+    ul.list_arrow li {
+        font-size: 0.9rem;
+    }
+
+    .priceDescription {
+        width: 90%
+    }
+
+    .fifteenContainer {
+        grid-template-columns: 100%;
+        row-gap: 50px;
+    }
+
+    .tarifCard {
+        width: 100%;
+    }
+
+    .tarifContainer {
+        grid-template-columns: 100%;
+        row-gap: 30px;
+        width: 90%;
+        margin: 0px auto;
+        justify-items: center;
+        align-items: center;
+        place-self: center;
+    }
+
+    .offreSecondContainer {
+        grid-template-columns: 100%;
+    }
+
+    .imageStarlinkV4 {
+        margin: -100px 0px -50px 0px;
+    }
+
+    .starliknV4Container {
+        grid-template-columns: 100%;
+        margin-top: 50px;
+        width: 90%;
+        margin: 70px auto 0px auto;
+        justify-items: center;
+        align-items: center;
+        place-self: center;
+    }
+
+
     .firstContainer {
         max-height: 400px;
         margin: -90px 0px
@@ -252,20 +275,21 @@ ul.list_arrow li {
     }
 
     .titleDescription {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         width: 90%
     }
 
     .price {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
     .title {
-        font-size: 2rem;
+        font-size: 1.7rem;
     }
 
     .serviceTitle {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
+        word-wrap: wrap;
     }
 
     ul.list_arrow {
@@ -275,12 +299,28 @@ ul.list_arrow li {
     }
 
     .aproposDescription {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
     ul.list_dash {
         width: 90%;
-        font-size: 0.8rem;
+        margin-top: -10px;
+    }
+
+    ul.list_dash li{
+        font-size:0.9rem;
+    }
+
+    ul.list_arrow li {
+        font-size: 1rem;
+    }
+
+    .fifteenDescription {
+        font-size: 1rem;
+    }
+    .fifteenDetail{
+        font-size:0.9rem;
+        line-height:20px
     }
 }
 
@@ -289,11 +329,9 @@ ul.list_arrow li {
     0%,
     100% {
         transform: scale(1);
-        /* Taille normale */
     }
 
     50% {
         transform: scale(1.1);
-        /* Agrandissement au pic */
     }
 }

@@ -32,98 +32,7 @@ function StarlinkProviderPage() {
           COMMUNICATION FRANCE.
         </span>
       </div>
-      <div className={styles.secondContainer}>
-        <span className={styles.title}>Qui nous sommes ?</span>
-        <span className={styles.aproposDescription}>
-          Distributeur Starlink <br />
-          Solution télécom sur mesure
-        </span>
-        <div
-          style={{
-            position: "relative",
-            width: "200px",
-            height: "200px",
-            margin: "50px 0px -50px 0px",
-          }}
-        >
-          <Image
-            src="/assets/logo_provider.png"
-            alt="logo mzo starlink provider"
-            layout="fill"
-            objectFit="contain"
-          />
-        </div>
-        <div className="pageDoteContainer">
-          <div className="pageDote"></div>
-          <div className="pageDote"></div>
-          <div className="pageDote"></div>
-        </div>
-
-        <span
-          style={{ color: "#ff8c00", margin: "120px 0px 30px 0px" }}
-          className={styles.serviceTitle}
-        >
-          SERVICES PROPOSES
-        </span>
-        <ul className={styles.list_dash}>
-          <li>Audit et installation à domicile ou sur site</li>
-          <li>Internet haut débit et fiable</li>
-          <li>Prix imbattable avec garantie pour tout nos matériaux</li>
-          <li>Kit entièrement au nom du client</li>
-          <li>Support personnalisé avec assistances</li>
-          <li>
-            <span style={{ color: "#e10b1a" }}>
-              Offre de location temporaire{" "}
-            </span>
-            <span style={{ fontSize: "1rem" }}>
-              ( offre soumise sous conditions )
-            </span>
-          </li>
-        </ul>
-        <ul className={styles.list_arrow}>
-          <li>
-            <span style={{ marginBottom: "20px", fontSize: "1.3rem" }}>
-              OBJECTIFS
-            </span>
-            <br />
-            <span
-              style={{ color: "#000", marginLeft: "1rem", fontSize: "1.1rem" }}
-            >
-              Prospecter de nouveaux clients et planifier des rendez-vous.
-            </span>
-            <br />
-            <span
-              style={{ color: "#000", marginLeft: "1rem", fontSize: "1.1rem" }}
-            >
-              Garantir une porte d'entrer pour les commerciaux
-            </span>
-          </li>
-          <li>
-            <span style={{ marginBottom: "20px", fontSize: "1.3rem" }}>
-              NOS CIBLES
-            </span>
-            <br />
-            <span
-              style={{ color: "#000", marginLeft: "1rem", fontSize: "1.1rem" }}
-            >
-              Particuliers, Entreprises privées, Entités publiques,
-              Organisations et associations, Universités et Grandes écoles
-            </span>
-          </li>
-          <li>
-            <span style={{ marginBottom: "20px", fontSize: "1.3rem" }}>
-              INTERLOCUTEURS
-            </span>
-            <br />
-            <span
-              style={{ color: "#000", marginLeft: "1rem", fontSize: "1.1rem" }}
-            >
-              Particulier, Responsable communication, Directeur technique,
-              Résponsable technique, Gérant, Décisionnaire...
-            </span>
-          </li>
-        </ul>
-      </div>
+     
       <div className={styles.thirdContainer}>
         <span
           style={{ color: "#ff8c00", margin: "50px 0px 10px 0px" }}
@@ -171,14 +80,7 @@ function StarlinkProviderPage() {
         </span>
         <div className={styles.offreContainer}>
           <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(2,1fr)",
-              gap: "70px",
-              width: "100%",
-              marginBottom: "-20px",
-              alignItems: "center",
-            }}
+            className={styles.starliknV4Container}
           >
             <div className={styles.offreDescription}>
               <span className={styles.offreTitle}>STARLINK STANDARD V4</span>
@@ -196,6 +98,7 @@ function StarlinkProviderPage() {
                 width: "350px",
                 height: "350px",
               }}
+              className={styles.imageStarlinkV4}
             >
               <Image
                 src="/assets/starlink-v4.png"
@@ -553,6 +456,7 @@ function StarlinkProviderPage() {
             textAlign: "center",
             marginTop: "50px",
           }}
+          className={styles.priceDescription}
         >
           Internet haut débit fiable pour les entreprises.
           <br /> A partir de 316.000Ar/Mois avec un coût de matériel de
@@ -577,7 +481,7 @@ function StarlinkProviderPage() {
       <div className={styles.fifteenContainer}>
         <div style={{display:'flex',flexDirection:'column'}}>
           <span style={{ color: "#ff8c00", margin: "50px 0px 10px 0px", textAlign:'left' }} className={styles.serviceTitle}>Pourquoi nous</span>
-          <span style={{fontSize:'1.1rem',marginTop:'20px'}}>
+          <span className={styles.fifteenDescription} >
             Faire de service à moindre coût garantissant un support client
             personnalisé avec assistance starlink<br/><br/>
             Garantie pour tous nos
@@ -591,7 +495,7 @@ function StarlinkProviderPage() {
             des matériaux au bout de 30 jours
           </span>
         </div>
-        <span style={{fontSize:'1.1rem',textAlign:'center',lineHeight:'40px'}}>
+        <span className={styles.fifteenDetail} >
           Frais de préstation <span style={{fontSize:'1.3rem',fontWeight:'700'}}>500.000 Ar</span><br/> à payer en une seule fois avec la
           commande des kits
         </span>
