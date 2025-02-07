@@ -31,13 +31,16 @@ function Activity() {
                   />
                 </div>
                 <h5 className={style.description}>{activity.descritption}</h5>
+                <div style={{position:"relative",width:"300px",height:'320px'}}>
                 <Image
                   src={activity.illustrationUrl}
                   alt="illustration mzo activity"
-                  width={300}
-                  height={320}
+                  layout="fill"
+                  objectFit="contain"
                   style={{ marginTop: "60px" }}
                 />
+                </div>
+                
               </div>
             </ScrollAppear>
           );

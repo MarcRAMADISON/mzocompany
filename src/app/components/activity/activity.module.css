@@ -17,6 +17,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: fit-content;
     padding: 10px;
     cursor:pointer;
     transition: all 1s ease,; 
@@ -52,6 +53,7 @@
     border-radius: 15px;
     transform: translateZ(40px) scale(1.06); 
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    height:fit-content
 }
 
 @media (max-width:1366px) and (min-width:1081px){
