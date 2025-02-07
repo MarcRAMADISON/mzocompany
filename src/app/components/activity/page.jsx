@@ -15,7 +15,7 @@ function Activity() {
         {listActivity.map((activity, index) => {
           return (
             <ScrollAppear key={index}>
-              <div className={style.activityCard} onClick={()=>router.push(`${activity.pageUrl}`)}>
+              <div className={style.activityCard} onClick={()=>activity.name === "Mi-Zesta Online"? window.open('https://www.facebook.com/mizestaonline', '_blank') : router.push(`${activity.pageUrl}`)}>
                 <div
                   style={{
                     position: "relative",

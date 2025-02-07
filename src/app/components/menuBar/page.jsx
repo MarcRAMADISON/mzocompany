@@ -316,7 +316,7 @@ function MenuBar() {
               <div
                 key={index}
                 className={style.activityItem}
-                onClick={()=>router.push(`${activity.pageUrl}`)}
+                onClick={()=>activity.name === "Mi-Zesta Online"? window.open('https://www.facebook.com/mizestaonline', '_blank') : router.push(`${activity.pageUrl}`)}
               >
                 <Image
                   src={activity.logoUrl}
@@ -386,7 +386,7 @@ function MenuBar() {
                 <span
                   key={index}
                   className={style.activityItemMobile}
-                  onClick={()=>router.push(`${activity.pageUrl}`)}
+                  onClick={()=>activity.name === "Mi-Zesta Online"? window.open('https://www.facebook.com/mizestaonline', '_blank') : router.push(`${activity.pageUrl}`)}
                 >
                   {activity.name}
                 </span>
