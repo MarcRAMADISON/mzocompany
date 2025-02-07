@@ -51,18 +51,18 @@ function StarlinkProviderPage() {
             display: "flex",
             alignItems: "flex-end",
             justifyContent: "center",
-            marginTop: "0px",
+            marginTop: "20px",
           }}
         >
           <span className={styles.price}>226.000 AR</span>
           <span
             style={{
               color: "#ff8c00",
-              fontSize: "1.1rem",
+              fontSize: "0.8rem",
               fontWeight: "400",
               marginTop: "0px",
             }}
-            className={styles.titleDescription}
+            className={styles.labelPrice}
           >
             /MOIS
           </span>
@@ -70,11 +70,13 @@ function StarlinkProviderPage() {
         <span
           style={{
             color: "#000",
-            fontSize: "1.1rem",
+            fontSize: "1rem",
             fontWeight: "400",
-            marginTop: "0px",
+            marginTop: "10px",
+            maxWidth:'70%',
+            textAlign:"center"
           }}
-          className={styles.titleDescription}
+          //className={styles.titleDescription}
         >
           Données illimitées / Sans engagement
         </span>
