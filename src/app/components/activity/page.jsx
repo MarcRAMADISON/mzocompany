@@ -31,13 +31,12 @@ function Activity() {
                   />
                 </div>
                 <h5 className={style.description}>{activity.descritption}</h5>
-                <div style={{position:"relative",width:"300px",height:'320px'}}>
+                <div style={{position:"relative",width:"300px",height:'320px',marginTop:'30px'}}>
                 <Image
                   src={activity.illustrationUrl}
                   alt="illustration mzo activity"
                   layout="fill"
                   objectFit="contain"
-                  style={{ marginTop: "60px" }}
                 />
                 </div>
                 
