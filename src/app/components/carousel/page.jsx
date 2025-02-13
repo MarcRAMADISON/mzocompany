@@ -5,7 +5,7 @@ import "react-multi-carousel/lib/styles.css";
 import style from "./carousel.module.css";
 import Image from "next/image";
 
-const CustomCarousel = ({ rows = [] }) => {
+const CustomCarousel = ({ rows = [], disposition='cover' }) => {
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -50,7 +50,7 @@ const CustomCarousel = ({ rows = [] }) => {
                 src={row}
                 alt="image about mzo"
                 layout="fill"
-                objectFit="cover"
+                objectFit={disposition}
               />
             </div>
         );

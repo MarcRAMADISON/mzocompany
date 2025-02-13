@@ -23,6 +23,8 @@
     transition: all 1s ease,; 
     transform: translateZ(0); 
     perspective: 1000px;
+    max-width:370px;
+    place-self: center
 }
 
 .activityBlock{
@@ -55,7 +57,7 @@
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
 
-@media (max-width:1366px) and (min-width:1081px){
+@media (max-width:1766px) and (min-width:920px){
     .activityBlock{
         grid-template-columns: repeat(3,1fr);
         margin-bottom: 100px;

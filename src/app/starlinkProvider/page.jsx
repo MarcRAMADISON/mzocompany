@@ -111,7 +111,7 @@ function StarlinkProviderPage() {
             </div>
           </div>
           <span style={{ placeSelf: "center" }}>
-            Un coût materiel unique de 1.479.000Ar
+            Un coût materiel unique de 1.749.000Ar
           </span>
           <div
             style={{ display: "flex", placeSelf: "center", marginTop: "10px" }}
@@ -182,7 +182,7 @@ function StarlinkProviderPage() {
               </ul>
             </div>
             <span style={{ placeSelf: "center", marginTop: "30px" }}>
-              Un coût materiel unique de 1.479.000Ar
+              Un coût materiel unique de 900.000Ar
             </span>
             <div
               style={{
@@ -236,7 +236,7 @@ function StarlinkProviderPage() {
             >
               Pour les entreprises et les utilisateurs à forte consommations
             </span>
-            <span className={styles.subTitleTarif}>
+            <span style={{textAlign:"center"}} className={styles.subTitleTarif}>
               PRINCIPALES FONCTIONNALITES
             </span>
             <span className={styles.détailTarif}>
@@ -318,7 +318,7 @@ function StarlinkProviderPage() {
               Idéal pour les entreprises maritimes, les entreprises
               d'intervention d'urgence et les entreprises mobiles
             </span>
-            <span className={styles.subTitleTarif}>
+            <span style={{textAlign:"center"}} className={styles.subTitleTarif}>
               PRINCIPALES FONCTIONNALITES
             </span>
             <span className={styles.détailTarif}>
@@ -391,7 +391,7 @@ function StarlinkProviderPage() {
               Idéal pour les entreprises maritimes, les entreprises
               d'intervention d'urgence et les entreprises mobiles
             </span>
-            <span className={styles.subTitleTarif}>
+            <span style={{textAlign:"center"}} className={styles.subTitleTarif}>
               PRINCIPALES FONCTIONNALITES
             </span>
             <span className={styles.détailTarif}>
@@ -461,9 +461,9 @@ function StarlinkProviderPage() {
           className={styles.priceDescription}
         >
           Internet haut débit fiable pour les entreprises.
-          <br /> A partir de 316.000Ar/Mois avec un coût de matériel de
+          <br /> A partir de 316.800Ar/Mois avec un coût de matériel de
           13.560.000 Ar
-          <br /> + prix d'expédition 281.000 Ar
+          <br /> + prix d'expédition 271.200 Ar
           <span
             style={{
               marginLeft: "10px",
@@ -494,7 +494,8 @@ function StarlinkProviderPage() {
             nom <br/><br/>
             Prix vérifiable sur site starlink et pas de frais caché<br/><br/>
              Retour
-            des matériaux au bout de 30 jours
+            des matériaux au bout de 30 jours si défaillant avec un abonnement de 1mois offert comme dédommagement
+
           </span>
         </div>
         <span className={styles.fifteenDetail} >

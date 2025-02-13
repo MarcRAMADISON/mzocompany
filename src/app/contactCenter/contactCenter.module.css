@@ -1,0 +1,100 @@
+.firstContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 720px;
+}
+
+.filigrane {
+    position: absolute;
+    width: 80vw;
+    height: auto;
+    z-index: 0;
+    animation: heartbeat 3s infinite ease-in-out;
+}
+
+.logoMzo {
+    position: relative;
+    width:60vw;
+    height: 60vh;
+    max-width: 500px;
+    max-height: 500px;
+    margin-Top: 20vh;
+    z-index: 99;
+}
+
+.titleDescription {
+    margin: 10vh 0px;
+    font-weight: 600;
+    font-size: 1.4rem;
+    max-width: 1280px;
+    width:80%;
+    text-align: center;
+    z-index: 99;
+    letter-spacing: 1px;
+    line-height: 30px;
+    word-spacing: 4px;
+}
+
+
+ .video_container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: auto auto 10vh auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+
+}
+
+
+.video_container::before {
+    content: "";
+    display: block;
+    padding-top: 56.25%; 
+}
+
+
+.video_container iframe,
+.video_container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.carouselContainer{
+    width:100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width:1080px){
+    .titleDescription {
+        margin: 5vh 0px;
+        font-size: 1rem;
+    }
+    .logoMzo{
+        margin: 5vh 0px -7vh 0px;
+    }
+    .video_container {
+        width: 90%;
+        margin: 5vh auto -5vh auto;
+    }
+    
+.filigrane {
+    top:40vh
+}
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+  }

@@ -156,9 +156,9 @@
 
 @keyframes heartbeat {
     0%, 100% {
-      transform: scale(1); /* Taille normale */
+      transform: scale(1);
     }
     50% {
-      transform: scale(1.1); /* Agrandissement au pic */
+      transform: scale(1.1);
     }
   }
