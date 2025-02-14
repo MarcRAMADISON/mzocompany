@@ -1,6 +1,6 @@
 import { Montserrat } from "next/font/google";
 import "./globals.css";
-import SEOProvider from "./seoProvider";
+import SEOProvider from "./SeoProvider";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -11,13 +11,17 @@ const montserrat = Montserrat({
 export const metadata = {
   title: "MZO Company",
   description: "Site vitrine de MZO Company",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
+
 
 export default function RootLayout({ children }) {
   return (
     <html lang="fr">
       <body className={montserrat.className}>
-        <SEOProvider/>
+        <SEOProvider />
         {children}
       </body>
     </html>
