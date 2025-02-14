@@ -5,6 +5,7 @@ import Activity from "./components/activity/page";
 import About from "./components/about/page";
 
 
+
 export default function Home() {
   return (
     <div className={styles.page}>
