@@ -16,14 +16,13 @@ export const metadata = {
   },
 };
 
-
 export default function RootLayout({ children }) {
   return (
     <html lang="fr">
-      <body className={montserrat.className}>
-        <SEOProvider />
-        {children}
-      </body>
+      <head>
+        {/*<SEOProvider />*/}
+      </head>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }
