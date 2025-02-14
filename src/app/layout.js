@@ -1,6 +1,5 @@
 import { Montserrat } from "next/font/google";
 import "./globals.css";
-import SEOProvider from "./SeoProvider";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
