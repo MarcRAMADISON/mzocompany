@@ -39,8 +39,9 @@ function MenuBar() {
     ) {
       const floatContact = document.querySelector("#floatContact");
 
-      sousMenuContact.style.height = "0";
+      sousMenuContact.style.height = "0px";
       sousMenuContact.style.opacity = "0";
+      sousMenuContact.style.padding = '0px';
       sousMenu.style.height = "0px";
       sousMenu.style.opacity = "0";
       floatContact.style.height = "0px";
@@ -90,7 +91,7 @@ function MenuBar() {
     const sousMenu = document.querySelector("#sousMenu");
     const sousMenuContact = document.querySelector("#sousMenuContact");
 
-    sousMenuContact.style.height = "0";
+    sousMenuContact.style.height = "0px";
     sousMenuContact.style.opacity = "0";
 
     setToggleActivity((prev) => {
@@ -113,16 +114,19 @@ function MenuBar() {
     const sousMenu = document.querySelector("#sousMenuContact");
     const sousMenuActivity = document.querySelector("#sousMenu");
 
-    sousMenuActivity.style.height = "0";
+
+    sousMenuActivity.style.height = "0px";
     sousMenuActivity.style.opacity = "0";
 
     setToggleContact((prev) => {
       if (prev) {
         sousMenu.style.height = "0px";
         sousMenu.style.opacity = "0";
+        sousMenu.style.padding = '0px';
       } else {
         sousMenu.style.height = "390px";
         sousMenu.style.opacity = "1";
+        sousMenu.style.padding = '50px 20px';
       }
 
       return !prev;
@@ -249,54 +253,6 @@ function MenuBar() {
                   <div className={style.arrow_down}></div>
                 )}
               </div>
-              <div
-                className={style.sous_menu_contact}
-                id="sousMenuContact"
-                ref={contactRef}
-              >
-                {listSocialMedia.map((media, index) => {
-                  return (
-                    <Link
-                      key={index}
-                      href={media.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <div
-                        style={{
-                          display: "flex",
-                          alignItems: "center",
-                          marginTop: "5px",
-                          cursor: "pointer",
-                        }}
-                      >
-                        <Image
-                          src={media.urlImage}
-                          width={40}
-                          height={40}
-                          alt="social media link image"
-                        />
-                        <span className={style.contactValue}>
-                          {media.value}
-                        </span>
-                      </div>
-                    </Link>
-                  );
-                })}
-                <Image
-                  style={{ marginTop: "50px", placeSelf: "center" }}
-                  src="/assets/mzo_logo_black.png"
-                  alt="logo mzo company"
-                  width={120}
-                  height={80}
-                />
-                <span
-                  className={style.contactValue}
-                  style={{ placeSelf: "center", marginTop: "50px" }}
-                >
-                  copyright (c) 2025
-                </span>
-              </div>
             </div>
             <div className={style.doteContainer}>
               <div className={style.dote}></div>
@@ -316,7 +272,14 @@ function MenuBar() {
               <div
                 key={index}
                 className={style.activityItem}
-                onClick={()=>activity.name === "Mi-Zesta Online"? window.open('https://www.facebook.com/mizestaonline', '_blank') : router.push(`${activity.pageUrl}`)}
+                onClick={() =>
+                  activity.name === "Mi-Zesta Online"
+                    ? window.open(
+                        "https://www.facebook.com/mizestaonline",
+                        "_blank"
+                      )
+                    : router.push(`${activity.pageUrl}`)
+                }
               >
                 <Image
                   src={activity.logoUrl}
@@ -327,6 +290,52 @@ function MenuBar() {
               </div>
             );
           })}
+        </div>
+        <div
+          className={style.sous_menu_contact}
+          id="sousMenuContact"
+          ref={contactRef}
+        >
+          {listSocialMedia.map((media, index) => {
+            return (
+              <Link
+                key={index}
+                href={media.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    marginTop: "5px",
+                    cursor: "pointer",
+                  }}
+                >
+                  <Image
+                    src={media.urlImage}
+                    width={40}
+                    height={40}
+                    alt="social media link image"
+                  />
+                  <span className={style.contactValue}>{media.value}</span>
+                </div>
+              </Link>
+            );
+          })}
+          <Image
+            style={{ marginTop: "50px", placeSelf: "center" }}
+            src="/assets/mzo_logo_black.png"
+            alt="logo mzo company"
+            width={120}
+            height={80}
+          />
+          <span
+            className={style.contactValue}
+            style={{ placeSelf: "center", marginTop: "50px" }}
+          >
+            copyright (c) 2025
+          </span>
         </div>
       </div>
 
@@ -386,7 +395,14 @@ function MenuBar() {
                 <span
                   key={index}
                   className={style.activityItemMobile}
-                  onClick={()=>activity.name === "Mi-Zesta Online"? window.open('https://www.facebook.com/mizestaonline', '_blank') : router.push(`${activity.pageUrl}`)}
+                  onClick={() =>
+                    activity.name === "Mi-Zesta Online"
+                      ? window.open(
+                          "https://www.facebook.com/mizestaonline",
+                          "_blank"
+                        )
+                      : router.push(`${activity.pageUrl}`)
+                  }
                 >
                   {activity.name}
                 </span>
