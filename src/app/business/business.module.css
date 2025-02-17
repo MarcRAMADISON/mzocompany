@@ -1,0 +1,78 @@
+.firstContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 720px;
+    margin-top: 80px;
+    margin-bottom: 100px;
+}
+
+.filigrane {
+    position: absolute;
+    width: 80vw;
+    height: auto;
+    z-index: 0;
+    animation: heartbeat 3s infinite ease-in-out;
+}
+
+.logoMzo {
+    position: relative;
+    width:60vw;
+    height: 60vh;
+    max-width: 500px;
+    max-height: 500px;
+    margin-Top: 20vh;
+    z-index: 99;
+}
+
+.titleDescription {
+    margin: 5vh 0px;
+    font-weight: 600;
+    font-size: 1.4rem;
+    max-width: 1280px;
+    width:80vw;
+    text-align: left;
+    z-index: 99;
+    letter-spacing: 1px;
+    line-height: 30px;
+    word-spacing: 4px;
+}
+
+.valeursContainer{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:30px;
+    width:80%
+}
+
+.valeurItem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10vh;
+}
+
+.valeurTitle{
+    color:#ff8c00;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.valeur{
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-top: 30px;
+}
+
+@keyframes heartbeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
