@@ -76,7 +76,7 @@ function MenuBar() {
         spans[0].style.transform = "translateY(13px) rotate(45deg)";
         spans[1].style.opacity = "0";
         spans[2].style.transform = "translateY(-13px) rotate(-45deg)";
-        idMenu.style.height = "400px";
+        idMenu.style.height = "470px";
         idMenu.style.opacity = "1";
       }
 
