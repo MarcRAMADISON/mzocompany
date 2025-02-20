@@ -69,6 +69,27 @@ function BusenessPage() {
           </span>
         </div>
       </div>
+      <span className={styles.sectionTitle}>Nos formations</span>
+      <div className={styles.formationContainer}>
+            <div className={styles.formationItem}>
+              <span className={styles.titleFormation}>
+                Call Center
+              </span>
+              <div style={{position:'relative', width:"300px", height:"400px"}}>
+                <Image src='/assets/carrousel14.jpg' alt='formation image' layout="fill" objectFit="contain"/>
+              </div>
+              <button className={styles.sendButton}>Demande d'inscrition</button>
+            </div>
+            <div className={styles.formationItem}>
+              <span className={styles.titleFormation}>
+                Business chine
+              </span>
+              <div style={{position:'relative', width:"300px", height:"400px"}}>
+                <Image src='/assets/mzo_chine.jpg' alt='formation image' layout="fill" objectFit="contain"/>
+              </div>
+              <button className={styles.sendButton}>Demande d'inscrition</button>
+            </div>
+      </div>
     </div>
   );
 }
