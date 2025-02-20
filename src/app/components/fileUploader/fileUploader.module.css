@@ -1,0 +1,36 @@
+.file_upload {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #fff;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin-top: 80px;
+  }
+  
+  .upload_btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .upload_btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .file_name {
+    font-size: 14px;
+    color: #555;
+    font-style: italic;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 150px;
+  }
+  

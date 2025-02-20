@@ -41,7 +41,7 @@ function MenuBar() {
 
       sousMenuContact.style.height = "0px";
       sousMenuContact.style.opacity = "0";
-      sousMenuContact.style.padding = '0px';
+      sousMenuContact.style.padding = "0px";
       sousMenu.style.height = "0px";
       sousMenu.style.opacity = "0";
       floatContact.style.height = "0px";
@@ -114,7 +114,6 @@ function MenuBar() {
     const sousMenu = document.querySelector("#sousMenuContact");
     const sousMenuActivity = document.querySelector("#sousMenu");
 
-
     sousMenuActivity.style.height = "0px";
     sousMenuActivity.style.opacity = "0";
 
@@ -122,11 +121,11 @@ function MenuBar() {
       if (prev) {
         sousMenu.style.height = "0px";
         sousMenu.style.opacity = "0";
-        sousMenu.style.padding = '0px';
+        sousMenu.style.padding = "0px";
       } else {
         sousMenu.style.height = "390px";
         sousMenu.style.opacity = "1";
-        sousMenu.style.padding = '50px 20px';
+        sousMenu.style.padding = "50px 20px";
       }
 
       return !prev;
@@ -254,6 +253,12 @@ function MenuBar() {
                 )}
               </div>
             </div>
+            <h5
+              className={style.menuItem}
+              onClick={() => router.push("/recrutement")}
+            >
+              Recrutement
+            </h5>
             <div className={style.doteContainer}>
               <div className={style.dote}></div>
               <div className={style.dote}></div>
@@ -368,8 +373,8 @@ function MenuBar() {
           <h5
             className={style.menuItem}
             style={{
-              marginTop: "20px",
-              paddingTop: "10px",
+              margin: "20px 0px",
+              paddingTop: "20px",
               color: "#010029",
               borderTop: "1px solid #010029",
               width: "90%",
@@ -411,9 +416,16 @@ function MenuBar() {
           </div>
           <h5
             className={style.menuItem}
+            style={{ marginTop: "30px", color: "#010029",borderTop: "1px solid #010029",width:'90%',textAlign:"center",paddingTop:'20px' }}
+            onClick={() => router.push("/recrutement")}
+          >
+            Recrutement
+          </h5>
+          <h5
+            className={style.menuItem}
             style={{
               marginTop: "20px",
-              paddingTop: "10px",
+              paddingTop: "20px",
               color: "#010029",
               borderTop: "1px solid #010029",
               width: "90%",
@@ -423,7 +435,7 @@ function MenuBar() {
             Contact
           </h5>
           <div
-            style={{ display: "flex", justifyContent: "center", width: "100%" }}
+            style={{ display: "flex", justifyContent: "center", width: "100%",marginBottom:'30px' }}
           >
             {listSocialMedia.map((media, index) => {
               return (
