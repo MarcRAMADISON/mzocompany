@@ -69,7 +69,7 @@
 .formationContainer{
     display:grid;
     grid-template-columns: repeat(2,1fr);
-    gap:15vw;
+    gap:12vw;
     margin-top:100px;
 }
 
@@ -101,7 +101,6 @@
 .sendButton {
     background-color: #007bff;
     color: white;
-    padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
@@ -130,6 +129,70 @@
     font-size: 2rem;
     font-weight: 700;
     margin:200px 0px 0px 0px;
+  }
+
+  .input-container {
+    position: relative;
+    width: 300px;
+  }
+  
+  
+  .input_container input {
+    width: 100%;
+    height: 45px;
+    padding: 12px 15px 12px 40px;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s ease-in-out;
+    background: none;
+    color: #000
+  }
+  
+  .input_container input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+  }
+  
+  .input_container input::placeholder {
+    color: #949596;
+    font-style: italic;
+  }
+  
+  .input_container input:focus+i {
+    color: #007bff;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 40px;
+  }
+
+  .disabledButton {
+    background-color: #949596;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+    border: none;
+    margin: 20px 0px;
+    padding: 15px 25px;
+  }
+  .formulaireContact{
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 20px 0px 10px 0px
+  }
+
+  .formulaireSubTitle{
+    font-size: 1rem;
+    font-weight: 500;
+    color:#ff8c00;
 
   }
 
