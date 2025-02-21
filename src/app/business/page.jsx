@@ -71,11 +71,11 @@ function BusenessPage() {
       </div>
       <span className={styles.sectionTitle}>Nos formations</span>
       <div className={styles.formationContainer}>
-            <div className={styles.formationItem}>
+            <div  className={styles.formationItem}>
               <span className={styles.titleFormation}>
                 Call Center
               </span>
-              <div style={{position:'relative', width:"300px", height:"400px"}}>
+              <div style={{position:'relative', width:"350px", height:"350px"}}>
                 <Image src='/assets/carrousel14.jpg' alt='formation image' layout="fill" objectFit="contain"/>
               </div>
               <button className={styles.sendButton}>Demande d'inscrition</button>
@@ -84,7 +84,7 @@ function BusenessPage() {
               <span className={styles.titleFormation}>
                 Business chine
               </span>
-              <div style={{position:'relative', width:"300px", height:"400px"}}>
+              <div style={{position:'relative', width:"350px", height:"350px"}}>
                 <Image src='/assets/mzo_chine.jpg' alt='formation image' layout="fill" objectFit="contain"/>
               </div>
               <button className={styles.sendButton}>Demande d'inscrition</button>
