@@ -28,7 +28,7 @@ function BusenessPage() {
 
   const sendToWhatsApp = () => {
     const phoneNumber = "261389365978"; // Remplace par ton numéro WhatsApp (sans le +)
-    const text = `Nom: ${values.name}%0APrénom: ${values.firstname}%0ATéléphone: ${values.phone}%0ANom sur Facebook: ${values.fbName}%0AAdresse: ${values.adresse}`;
+    const text = `Hello, MZO Company,%0A%0AVous avez une nouvelle inscription en ${typeFormation === 'CALL'? "Call Center" : "Business Chine"}%0A%0ANom: ${values.name}%0APrénom: ${values.firstname}%0ATéléphone: ${values.phone}%0ANom sur Facebook: ${values.fbName}%0AAdresse: ${values.adresse}`;
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${text}`;
 
     window.open(whatsappUrl, "_blank");
