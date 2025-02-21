@@ -26,6 +26,15 @@ function BusenessPage() {
 
   const checkValidation= !!values?.adresse && !!values?.firstname && !!values?.name && !!values?.phone && !!values?.fbName && !loading;
 
+  const sendToWhatsApp = () => {
+    const phoneNumber = "261389365978"; // Remplace par ton numéro WhatsApp (sans le +)
+    const text = `Nom: ${values.name}%0APrénom: ${values.firstname}%0ATéléphone: ${values.phone}%0ANom sur Facebook: ${values.fbName}%0AAdresse: ${values.adresse}`;
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${text}`;
+
+    window.open(whatsappUrl, "_blank");
+  };
+
+
 
   const handleSend=()=>{
     setLoading(true);
@@ -50,13 +59,19 @@ function BusenessPage() {
         .then(() => {
           Swal.fire({
             title: "Succès !",
-            text: "Candidature envoyé avec succès !",
+            text: "Candidature envoyé avec succès ! Voulez vous envoyer directement la demande sur Watsapp?",
             icon: "success",
-            confirmButtonText: "OK",
-            timer: 8000,
+            confirmButtonText: "Watsapp",
+            timer: 45000,
+            showCancelButton: true,
+            cancelButtonText:"Terminer",
             toast: true,
             position: "center",
-          });
+          }).then((result) => {
+            if (result.isConfirmed) {
+              sendToWhatsApp()
+            }
+          });;
 
           setValues({name:'',firstname:'',phone:'',adresse:'',fbName:''})
           setLoading(false)
