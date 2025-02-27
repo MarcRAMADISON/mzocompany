@@ -11,12 +11,15 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 15vh;
+    background-image: url('/assets/backgroun_booklet1.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .price {
     font-weight: 500;
-    font-size: 2.4rem;
+    font-size: 2.5rem;
     text-align: center;
     z-index: 99;
     color: #ff8c00;
@@ -26,15 +29,16 @@
 .titleDescription {
     margin-top: 60px;
     font-weight: 500;
-    font-size: 2.4rem;
+    font-size: 2.1rem;
     max-width: 900px;
     text-align: center;
     z-index: 99;
+    color: #000
 }
 
 .title {
     font-weight: 700;
-    font-size: 3rem;
+    font-size: 3.1rem;
     text-align: center;
     z-index: 99;
 }
@@ -43,11 +47,19 @@
 .fourthContainer {
     display: flex;
     flex-direction: column;
-    margin-top: 10px
+    margin-top: 10px;
+    
+}
+
+.fourthContainer{
+    background-image: url('/assets/backgroun_booklet1.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .offreDescription {
-    border: 1px solid #000;
+    border: 1px solid #fff;
     width: fit-content;
     height: fit-content;
     display: flex;
@@ -58,9 +70,10 @@
 }
 
 .offreTitle {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 700;
     margin-top: 30px;
+    color: #fff
 }
 
 ul.list_dash2 {
@@ -74,15 +87,16 @@ ul.list_dash2 {
 
 ul.list_dash2 li::before {
     content: "— ";
-    color: #000;
+    color: #fff;
     font-weight: bold;
     width: 0px;
 }
 
 ul.list_dash2 li {
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 1.1rem;
     margin-top: 5px;
+    color: #fff;
 }
 
 
@@ -106,7 +120,7 @@ ul.list_dash2 li {
 .aproposDescription {
     margin-top: 60px;
     font-weight: 500;
-    font-size: 2rem;
+    font-size: 2.1rem;
     max-width: 900px;
     text-align: center;
     z-index: 99;
@@ -115,7 +129,7 @@ ul.list_dash2 li {
 
 .serviceTitle {
     font-weight: 700;
-    font-size: 3rem;
+    font-size: 3.1rem;
     text-align: center;
     z-index: 99;
 }
@@ -140,13 +154,13 @@ ul.list_dash2 li {
     justify-content: flex-start;
     align-items: center;
     width: 90%;
-    border: #000 solid 1px;
+    border: #fff solid 1px;
     padding: 20px;
 
 }
 
 .subTitleTarif {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: #999;
     margin: 30px 0px 10px 0px;
     text-transform: uppercase;
@@ -163,13 +177,13 @@ ul.list_dash2 li {
 .détailTarif {
     font-weight: 700;
     margin-top: 10px;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 .lineTarif {
     display: flex;
     padding-bottom: 15px;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #fff;
     margin-top: 20px;
     width: 100%;
     justify-content: center;
@@ -179,11 +193,18 @@ ul.list_dash2 li {
 .fifteenContainer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     justify-items: center;
     align-items: center;
-    margin-bottom: 100px;
+    padding:10vh;
+}
+
+.fifteenContainer{
+    background-image: url('/assets/backgroun_booklet1.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .starliknV4Container {
@@ -196,14 +217,14 @@ ul.list_dash2 li {
 }
 
 .fifteenDescription {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     margin-top: 20px;
 }
 
-.fifteenDetail{
-    font-size:1.1rem;
+.fifteenDetail {
+    font-size: 1.2rem;
     text-align: center;
-    line-height:40px
+    line-height: 40px
 }
 
 @media (max-width:1080px) {
@@ -313,8 +334,8 @@ ul.list_dash2 li {
         padding: 0px 20px 20px 20px;
     }
 
-    ul.list_dash li{
-        font-size:0.9rem;
+    ul.list_dash li {
+        font-size: 0.9rem;
     }
 
     ul.list_arrow li {
@@ -324,9 +345,10 @@ ul.list_dash2 li {
     .fifteenDescription {
         font-size: 1rem;
     }
-    .fifteenDetail{
-        font-size:0.9rem;
-        line-height:20px
+
+    .fifteenDetail {
+        font-size: 0.9rem;
+        line-height: 20px
     }
 }
 

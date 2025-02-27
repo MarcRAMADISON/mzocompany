@@ -38,14 +38,14 @@ function StarlinkProviderPage() {
           style={{ color: "#ff8c00", margin: "50px 0px 10px 0px" }}
           className={styles.serviceTitle}
         >
-          OFFRE STARLINK PARTICULIER
+          OFFRES STARLINK PARTICULIER
         </span>
         <div className="pageDoteContainer">
-          <div className="pageDote"></div>
-          <div className="pageDote"></div>
-          <div className="pageDote"></div>
+          <div style={{backgroundColor:"#fff"}} className="pageDote"></div>
+          <div style={{backgroundColor:"#fff"}} className="pageDote"></div>
+          <div style={{backgroundColor:"#fff"}} className="pageDote"></div>
         </div>
-        <span className={styles.titleDescription}>RESIDENTIEL</span>
+        <span style={{color:"#fff"}} className={styles.titleDescription}>RESIDENTIEL</span>
         <div
           style={{
             display: "flex",
@@ -58,7 +58,7 @@ function StarlinkProviderPage() {
           <span
             style={{
               color: "#ff8c00",
-              fontSize: "0.8rem",
+              fontSize: "0.9rem",
               fontWeight: "400",
               marginTop: "0px",
             }}
@@ -69,8 +69,8 @@ function StarlinkProviderPage() {
         </div>
         <span
           style={{
-            color: "#000",
-            fontSize: "1rem",
+            color: "#fff",
+            fontSize: "1.1rem",
             fontWeight: "400",
             marginTop: "10px",
             maxWidth:'70%',
@@ -110,13 +110,13 @@ function StarlinkProviderPage() {
               />
             </div>
           </div>
-          <span style={{ placeSelf: "center" }}>
+          <span style={{ placeSelf: "center", color:"#fff" }}>
             Un coût materiel unique de 1.749.000Ar
           </span>
           <div
             style={{ display: "flex", placeSelf: "center", marginTop: "10px" }}
           >
-            <span style={{ fontWeight: "700" }}>
+            <span style={{ fontWeight: "700", color:"#fff" }}>
               + prix d'expedition 113.000Ar
             </span>
             <span
@@ -151,14 +151,14 @@ function StarlinkProviderPage() {
             <span style={{ marginTop: "50px" }} className={styles.offreTitle}>
               STARLINK MINI V4
             </span>
-            <span style={{ marginTop: "10px" }}>
+            <span style={{ marginTop: "10px", color: '#fff' }}>
               Le forfait le plus abordable
             </span>
-            <span style={{ marginTop: "10px" }} className={styles.offreTitle}>
+            <span style={{ marginTop: "10px",color:'#fff' }} className={styles.offreTitle}>
               {" "}
               136.000 AR/MOIS
             </span>
-            <span style={{ marginTop: "10px" }}>
+            <span style={{ marginTop: "10px",color:'#fff' }}>
               Données dépréciées illimitées
             </span>
           </div>
@@ -181,7 +181,7 @@ function StarlinkProviderPage() {
                 <li>Débit 100mbits/s</li>
               </ul>
             </div>
-            <span style={{ placeSelf: "center", marginTop: "30px" }}>
+            <span style={{ placeSelf: "center", marginTop: "30px", color: "#fff" }}>
               Un coût materiel unique de 900.000Ar
             </span>
             <div
@@ -191,7 +191,7 @@ function StarlinkProviderPage() {
                 marginTop: "10px",
               }}
             >
-              <span style={{ fontWeight: "700" }}>
+              <span style={{ fontWeight: "700", color:"#fff" }}>
                 + prix d'expedition 113.000Ar
               </span>
               <span
@@ -213,7 +213,7 @@ function StarlinkProviderPage() {
         </div>
       </div>
       <div
-        style={{ marginBottom: "100px", marginTop: "150px" }}
+        style={{ marginBottom: "30px", marginTop: "30px" }}
         className={styles.fourthContainer}
       >
         <span
@@ -224,79 +224,83 @@ function StarlinkProviderPage() {
         </span>
         <div className={styles.tarifContainer}>
           <div className={styles.tarifCard}>
-            <span style={{ fontSize: "1.5rem" }} className={styles.offreTitle}>
+            <span style={{ fontSize: "1.6rem", color:"#fff" }} className={styles.offreTitle}>
               EMPLACEMENT FIXE
             </span>
             <span
               style={{
-                fontSize: "0.9rem",
+                fontSize: "1rem",
                 marginTop: "20px",
                 textAlign: "center",
               }}
             >
               Pour les entreprises et les utilisateurs à forte consommations
             </span>
-            <span style={{textAlign:"center"}} className={styles.subTitleTarif}>
+            <span style={{textAlign:"center", color:"#fff"}} className={styles.subTitleTarif}>
               PRINCIPALES FONCTIONNALITES
             </span>
-            <span className={styles.détailTarif}>
+            <span className={styles.détailTarif} style={{color:"#fff"}}>
               Données standard illimitées
             </span>
-            <span className={styles.détailTarif}>IP Publique</span>
-            <span className={styles.détailTarif}>Priorité de réseau</span>
-            <span className={styles.détailTarif}>Assistante prioritaire</span>
-            <span className={styles.subTitleTarif}>Forfaits mensuels</span>
+            <span style={{color:"#fff"}} className={styles.détailTarif}>IP Publique</span>
+            <span style={{color:"#fff"}} className={styles.détailTarif}>Priorité de réseau</span>
+            <span style={{color:"#fff"}} className={styles.détailTarif}>Assistante prioritaire</span>
+            <span style={{color:"#fff"}} className={styles.subTitleTarif}>Forfaits mensuels</span>
             <span
-              style={{ textTransform: "uppercase", marginBottom: "20px" }}
+              style={{ textTransform: "uppercase", marginBottom: "20px", color:"#fff" }}
               className={styles.détailTarif}
             >
               Données standard illimitées
             </span>
             <div className={styles.lineTarif}>
-              <span style={{ fontSize: "0.9rem" }}>PRIORITAIRE - 40 GO</span>
+              <span style={{ fontSize: "1rem", color:"#fff" }}>PRIORITAIRE - 40 GO</span>
               <span
                 style={{
                   marginLeft: "20px",
                   fontWeight: "700",
-                  fontSize: "1.1rem",
+                  fontSize: "1.2rem",
+                  color:"#fff"
                 }}
               >
                 316800 AR
               </span>
-              <span style={{ fontSize: "0.7rem" }}>/Mois</span>
+              <span style={{ fontSize: "0.7rem",color:"#fff" }}>/Mois</span>
             </div>
             <div className={styles.lineTarif}>
-              <span style={{ fontSize: "0.9rem" }}>PRIORITAIRE - 1 TO</span>
+              <span style={{ fontSize: "0.9rem",color:"#fff" }}>PRIORITAIRE - 1 TO</span>
               <span
                 style={{
                   marginLeft: "20px",
                   fontWeight: "700",
                   fontSize: "1.1rem",
+                  color:"#fff"
                 }}
               >
                 451200 AR
               </span>
-              <span style={{ fontSize: "0.7rem" }}>/Mois</span>
+              <span style={{ fontSize: "0.7rem",color:"#fff" }}>/Mois</span>
             </div>
 
             <div className={styles.lineTarif}>
-              <span style={{ fontSize: "0.9rem" }}>PRIORITAIRE - 2 TO</span>
+              <span style={{ fontSize: "0.9rem",color:"#fff" }}>PRIORITAIRE - 2 TO</span>
               <span
                 style={{
                   marginLeft: "20px",
                   fontWeight: "700",
                   fontSize: "1.1rem",
+                  color:"#fff"
                 }}
               >
                 902400 AR
               </span>
-              <span style={{ fontSize: "0.7rem" }}>/Mois</span>
+              <span style={{ fontSize: "0.7rem",color:"#fff" }}>/Mois</span>
             </div>
             <span
               style={{
                 fontSize: "0.7rem",
                 textAlign: "center",
                 marginTop: "10px",
+                color:"#fff"
               }}
             >
               Données standard illimitées après épuisement des données
@@ -305,7 +309,7 @@ function StarlinkProviderPage() {
             </span>
           </div>
           <div className={styles.tarifCard}>
-            <span style={{ fontSize: "1.5rem" }} className={styles.offreTitle}>
+            <span style={{ fontSize: "1.5rem",color:"#fff" }} className={styles.offreTitle}>
               MOBILE SUR TERRE
             </span>
             <span
@@ -313,31 +317,32 @@ function StarlinkProviderPage() {
                 fontSize: "0.9rem",
                 marginTop: "20px",
                 textAlign: "center",
+                color:"#fff"
               }}
             >
               Idéal pour les entreprises maritimes, les entreprises
               d'intervention d'urgence et les entreprises mobiles
             </span>
-            <span style={{textAlign:"center"}} className={styles.subTitleTarif}>
+            <span style={{textAlign:"center",color:"#fff"}} className={styles.subTitleTarif}>
               PRINCIPALES FONCTIONNALITES
             </span>
-            <span className={styles.détailTarif}>
+            <span style={{color:"#fff"}} className={styles.détailTarif}>
               Données illimitées sur le continent
             </span>
-            <span className={styles.détailTarif}>
+            <span style={{color:"#fff"}} className={styles.détailTarif}>
               En mouvement + utilisation en mer
             </span>
-            <span className={styles.détailTarif}>Priorité de réseau</span>
-            <span className={styles.détailTarif}>Assistante prioritaire</span>
-            <span className={styles.subTitleTarif}>Forfaits mensuels</span>
+            <span style={{color:"#fff"}} className={styles.détailTarif}>Priorité de réseau</span>
+            <span style={{color:"#fff"}} className={styles.détailTarif}>Assistante prioritaire</span>
+            <span style={{color:"#fff"}} className={styles.subTitleTarif}>Forfaits mensuels</span>
             <span
-              style={{ textTransform: "uppercase", marginBottom: "20px" }}
+              style={{ textTransform: "uppercase", marginBottom: "20px", color:"#fff" }}
               className={styles.détailTarif}
             >
               Données standard illimitées
             </span>
-            <div className={styles.lineTarif}>
-              <span style={{ fontSize: "0.9rem" }}>
+            <div style={{color:"#fff"}} className={styles.lineTarif}>
+              <span style={{ fontSize: "0.9rem", color: "#fff" }}>
                 MOBILE PRIORITAIRE - 1TO
               </span>
               <span
@@ -345,14 +350,15 @@ function StarlinkProviderPage() {
                   marginLeft: "20px",
                   fontWeight: "700",
                   fontSize: "1.1rem",
+                  color:"#fff"
                 }}
               >
                 5424000 AR
               </span>
-              <span style={{ fontSize: "0.7rem" }}>/Mois</span>
+              <span style={{ fontSize: "0.7rem",color:"#fff" }}>/Mois</span>
             </div>
             <div className={styles.lineTarif}>
-              <span style={{ fontSize: "0.9rem" }}>
+              <span style={{ fontSize: "0.9rem", color:"#fff" }}>
                 MOBILE PRIORITAIRE - 5 TO
               </span>
               <span
@@ -360,11 +366,12 @@ function StarlinkProviderPage() {
                   marginLeft: "20px",
                   fontWeight: "700",
                   fontSize: "1.1rem",
+                  color:"#fff"
                 }}
               >
                 27120000 AR
               </span>
-              <span style={{ fontSize: "0.7rem" }}>/Mois</span>
+              <span style={{ fontSize: "0.7rem",color:"#fff" }}>/Mois</span>
             </div>
 
             <span
@@ -372,13 +379,14 @@ function StarlinkProviderPage() {
                 fontSize: "0.7rem",
                 textAlign: "center",
                 marginTop: "10px",
+                color:"#fff"
               }}
             >
               Données mobiles prioritaires supplémentaires disponsibles par Go.
             </span>
           </div>
           <div className={styles.tarifCard}>
-            <span style={{ fontSize: "1.5rem" }} className={styles.offreTitle}>
+            <span style={{ fontSize: "1.5rem",color:"#fff" }} className={styles.offreTitle}>
               MARITIME
             </span>
             <span
@@ -386,31 +394,32 @@ function StarlinkProviderPage() {
                 fontSize: "0.9rem",
                 marginTop: "20px",
                 textAlign: "center",
+                color:"#fff"
               }}
             >
               Idéal pour les entreprises maritimes, les entreprises
               d'intervention d'urgence et les entreprises mobiles
             </span>
-            <span style={{textAlign:"center"}} className={styles.subTitleTarif}>
+            <span style={{textAlign:"center",color:"#fff"}} className={styles.subTitleTarif}>
               PRINCIPALES FONCTIONNALITES
             </span>
-            <span className={styles.détailTarif}>
+            <span style={{color:"#fff"}} className={styles.détailTarif}>
               Données illimitées sur le continent
             </span>
-            <span className={styles.détailTarif}>
+            <span style={{color:"#fff"}} className={styles.détailTarif}>
               En mouvement + utilisation en mer
             </span>
-            <span className={styles.détailTarif}>Priorité de réseau</span>
-            <span className={styles.détailTarif}>Assistante prioritaire</span>
-            <span className={styles.subTitleTarif}>Forfaits mensuels</span>
+            <span style={{color:"#fff"}} className={styles.détailTarif}>Priorité de réseau</span>
+            <span style={{color:"#fff"}} className={styles.détailTarif}>Assistante prioritaire</span>
+            <span style={{color:"#fff"}} className={styles.subTitleTarif}>Forfaits mensuels</span>
             <span
-              style={{ textTransform: "uppercase", marginBottom: "20px" }}
+              style={{ textTransform: "uppercase", marginBottom: "20px",color:"#fff" }}
               className={styles.détailTarif}
             >
               Données standard illimitées
             </span>
             <div className={styles.lineTarif}>
-              <span style={{ fontSize: "0.9rem" }}>
+              <span style={{ fontSize: "0.9rem",color:"#fff" }}>
                 MOBILE PRIORITAIRE - 1TO
               </span>
               <span
@@ -418,14 +427,15 @@ function StarlinkProviderPage() {
                   marginLeft: "20px",
                   fontWeight: "700",
                   fontSize: "1.1rem",
+                  color:"#fff"
                 }}
               >
                 5424000 AR
               </span>
-              <span style={{ fontSize: "0.7rem" }}>/Mois</span>
+              <span style={{ fontSize: "0.7rem",color:"#fff" }}>/Mois</span>
             </div>
             <div className={styles.lineTarif}>
-              <span style={{ fontSize: "0.9rem" }}>
+              <span style={{ fontSize: "0.9rem",color:"#fff" }}>
                 MOBILE PRIORITAIRE - 5 TO
               </span>
               <span
@@ -433,11 +443,12 @@ function StarlinkProviderPage() {
                   marginLeft: "20px",
                   fontWeight: "700",
                   fontSize: "1.1rem",
+                  color:"#fff"
                 }}
               >
                 27120000 AR
               </span>
-              <span style={{ fontSize: "0.7rem" }}>/Mois</span>
+              <span style={{ fontSize: "0.7rem",color:"#fff" }}>/Mois</span>
             </div>
 
             <span
@@ -445,6 +456,7 @@ function StarlinkProviderPage() {
                 fontSize: "0.7rem",
                 textAlign: "center",
                 marginTop: "10px",
+                color:"#fff"
               }}
             >
               Données mobiles prioritaires supplémentaires disponsibles par Go.
@@ -457,6 +469,7 @@ function StarlinkProviderPage() {
             placeSelf: "center",
             textAlign: "center",
             marginTop: "50px",
+            color:"#fff"
           }}
           className={styles.priceDescription}
         >
@@ -469,21 +482,22 @@ function StarlinkProviderPage() {
               marginLeft: "10px",
               color: "#ff8c00",
               fontWeight: "700",
+              color:"#fff"
             }}
           >
             DHL
           </span>
         </span>
         <div className="pageDoteContainer">
-          <div className="pageDote"></div>
-          <div className="pageDote"></div>
-          <div className="pageDote"></div>
+          <div style={{color:"#fff"}} className="pageDote"></div>
+          <div style={{color:"#fff"}} className="pageDote"></div>
+          <div style={{color:"#fff"}} className="pageDote"></div>
         </div>
       </div>
       <div className={styles.fifteenContainer}>
         <div style={{display:'flex',flexDirection:'column'}}>
-          <span style={{ color: "#ff8c00", margin: "50px 0px 10px 0px", textAlign:'left' }} className={styles.serviceTitle}>Pourquoi nous</span>
-          <span className={styles.fifteenDescription} >
+          <span style={{ color: "#ff8c00", margin: "50px 0px 10px 0px", textAlign:'left',color:"#fff" }} className={styles.serviceTitle}>Pourquoi nous</span>
+          <span style={{color:"#fff"}} className={styles.fifteenDescription} >
             Faire de service à moindre coût garantissant un support client
             personnalisé avec assistance starlink<br/><br/>
             Garantie pour tous nos
@@ -498,7 +512,7 @@ function StarlinkProviderPage() {
 
           </span>
         </div>
-        <span className={styles.fifteenDetail} >
+        <span style={{color:"#fff"}} className={styles.fifteenDetail} >
           Frais de préstation <span style={{fontSize:'1.3rem',fontWeight:'700'}}>500.000 Ar</span><br/> à payer en une seule fois avec la
           commande des kits
         </span>

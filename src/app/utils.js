@@ -34,7 +34,7 @@ export const listActivity = [
   {
     name: "MZO Business",
     logoUrl: "/assets/logo_business.png",
-    illustrationUrl: "/assets/mzo_business.png",
+    illustrationUrl: "/assets/carrousel7.png",
     descritption:
       "Simplifiez vos échanges commerciaux entre la Chine et Madagascar avec MZO Business et ses services d'importation et transit sur mesure.",
     pageUrl: "/business",

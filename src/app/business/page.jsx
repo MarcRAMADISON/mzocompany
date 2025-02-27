@@ -1,5 +1,4 @@
-'use client'
-
+"use client";
 
 import { useState } from "react";
 import MenuBar from "../components/menuBar/page";
@@ -11,32 +10,46 @@ import emailjs from "@emailjs/browser";
 
 function BusenessPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [typeFormation,setTypeFormation]= useState('');
-  const [values,setValues]=useState({name:'',firstname:'',phone:'',adresse:'',fbName:''})
-  const[loading,setLoading]=useState(false)
+  const [typeFormation, setTypeFormation] = useState("");
+  const [values, setValues] = useState({
+    name: "",
+    firstname: "",
+    phone: "",
+    adresse: "",
+    fbName: "",
+  });
+  const [loading, setLoading] = useState(false);
 
-  const handleOpenModal=(type)=>{
-    setTypeFormation(type)
-    setIsModalOpen(true)
-  }
+  const handleOpenModal = (type) => {
+    setTypeFormation(type);
+    setIsModalOpen(true);
+  };
 
   const handleChange = (value) => {
     setValues((prev) => ({ ...prev, [value.target.name]: value.target.value }));
   };
 
-  const checkValidation= !!values?.adresse && !!values?.firstname && !!values?.name && !!values?.phone && !!values?.fbName && !loading;
+  const checkValidation =
+    !!values?.adresse &&
+    !!values?.firstname &&
+    !!values?.name &&
+    !!values?.phone &&
+    !!values?.fbName &&
+    !loading;
 
   const sendToWhatsApp = () => {
     const phoneNumber = "261389365978"; // Remplace par ton numéro WhatsApp (sans le +)
-    const text = `Hello, MZO Company,%0A%0AVous avez une nouvelle inscription en ${typeFormation === 'CALL'? "Call Center" : "Business Chine"}%0A%0ANom: ${values.name}%0APrénom: ${values.firstname}%0ATéléphone: ${values.phone}%0ANom sur Facebook: ${values.fbName}%0AAdresse: ${values.adresse}`;
+    const text = `Hello, MZO Company,%0A%0AVous avez une nouvelle inscription en ${
+      typeFormation === "CALL" ? "Call Center" : "Business Chine"
+    }%0A%0ANom: ${values.name}%0APrénom: ${values.firstname}%0ATéléphone: ${
+      values.phone
+    }%0ANom sur Facebook: ${values.fbName}%0AAdresse: ${values.adresse}`;
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${text}`;
 
     window.open(whatsappUrl, "_blank");
   };
 
-
-
-  const handleSend=()=>{
+  const handleSend = () => {
     setLoading(true);
 
     const templateParams = {
@@ -45,7 +58,8 @@ function BusenessPage() {
       fbName: values.fbName,
       phone: values.phone,
       adresse: values.adresse,
-      typeFormation: typeFormation === 'CALL'? "Call Center" : "Business Chine"
+      typeFormation:
+        typeFormation === "CALL" ? "Call Center" : "Business Chine",
     };
 
     try {
@@ -64,20 +78,26 @@ function BusenessPage() {
             confirmButtonText: "Watsapp",
             timer: 45000,
             showCancelButton: true,
-            cancelButtonText:"Terminer",
+            cancelButtonText: "Terminer",
             toast: true,
             position: "center",
           }).then((result) => {
             if (result.isConfirmed) {
-              sendToWhatsApp()
+              sendToWhatsApp();
             }
-          });;
+          });
 
-          setValues({name:'',firstname:'',phone:'',adresse:'',fbName:''})
-          setLoading(false)
-          setIsModalOpen(false)
-
-        }).catch(()=>{
+          setValues({
+            name: "",
+            firstname: "",
+            phone: "",
+            adresse: "",
+            fbName: "",
+          });
+          setLoading(false);
+          setIsModalOpen(false);
+        })
+        .catch(() => {
           Swal.fire({
             title: "Erreur !",
             text: "Problème lors de l'envoie de votre candidature !",
@@ -88,8 +108,7 @@ function BusenessPage() {
             position: "center",
           });
 
-          setLoading(false)
-
+          setLoading(false);
         });
     } catch (error) {
       Swal.fire({
@@ -102,10 +121,9 @@ function BusenessPage() {
         position: "center",
       });
 
-      setLoading(false)
-
+      setLoading(false);
     }
-  }
+  };
 
   return (
     <div
@@ -116,9 +134,16 @@ function BusenessPage() {
         paddingBottom: "100px",
       }}
     >
-       <ModalComponent isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-        <span className={styles.formulaireContact}>Formulaire d'inscription</span>
-        <span className={styles.formulaireSubTitle}>{typeFormation === "CALL"? 'Call Center' : "Business Chine"}</span>
+      <ModalComponent
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      >
+        <span className={styles.formulaireContact}>
+          Formulaire d'inscription
+        </span>
+        <span className={styles.formulaireSubTitle}>
+          {typeFormation === "CALL" ? "Call Center" : "Business Chine"}
+        </span>
         <div className={styles.form}>
           <div className={styles.input_container}>
             <input
@@ -165,9 +190,15 @@ function BusenessPage() {
               name="adresse"
             />
           </div>
-          <button className={checkValidation ? styles.sendButton : styles.disabledButton} disabled={!checkValidation} onClick={handleSend}>
-          Envoyer demande d'inscription
-        </button>
+          <button
+            className={
+              checkValidation ? styles.sendButton : styles.disabledButton
+            }
+            disabled={!checkValidation}
+            onClick={handleSend}
+          >
+            Envoyer demande d'inscription
+          </button>
         </div>
       </ModalComponent>
       <MenuBar />
@@ -204,7 +235,7 @@ function BusenessPage() {
         opérations commerciales et garantir le succès de vos projets
         d’importation.{" "}
       </span>
-      <div className={styles.valeursContainer}>
+      {/*<div className={styles.valeursContainer}>
         <div className={styles.valeurItem}>
           <span className={styles.valeurTitle}>Sécurité</span>
           <span className={styles.valeur}>
@@ -226,27 +257,57 @@ function BusenessPage() {
             internationales.
           </span>
         </div>
-      </div>
+      </div>*/}
       <span className={styles.sectionTitle}>Nos formations</span>
       <div className={styles.formationContainer}>
-            <div  className={styles.formationItem}>
-              <span className={styles.titleFormation}>
-                Call Center
-              </span>
-              <div style={{position:'relative', width:"350px", height:"350px"}}>
-                <Image src='/assets/carrousel14.jpg' alt='formation image' layout="fill" objectFit="contain"/>
-              </div>
-              <button className={styles.sendButton} onClick={() => handleOpenModal('CALL')}>Demande d'inscrition</button>
+        <div style={{backgroundImage: "url('/assets/plateauCall.jpg')"}} className={styles.cardContainer} >
+          <div className={styles.formationItem}>
+            <span className={styles.titleFormation}>Call Center</span>
+            <div
+              style={{ position: "relative", width: "350px", height: "350px" }}
+            >
+              <Image
+                src="/assets/carrousel14.jpg"
+                alt="formation image"
+                layout="fill"
+                objectFit="contain"
+              />
             </div>
-            <div className={styles.formationItem}>
-              <span className={styles.titleFormation}>
-                Business chine
-              </span>
-              <div style={{position:'relative', width:"350px", height:"350px"}}>
-                <Image src='/assets/mzo_chine.jpg' alt='formation image' layout="fill" objectFit="contain"/>
-              </div>
-              <button className={styles.sendButton} onClick={() => handleOpenModal('BUSINESS')}>Demande d'inscrition</button>
+            <button
+              className={styles.sendButton}
+              onClick={() => handleOpenModal("CALL")}
+            >
+              Demande d'inscrition
+            </button>
+          </div>
+        </div>
+
+        <div style={{backgroundImage: "url('/assets/chineBg.jpeg')"}} className={styles.cardContainer}>
+
+          <div className={styles.formationItem}>
+            <span className={styles.titleFormation}>Business chine</span>
+            <div
+              style={{ position: "relative", width: "350px", height: "350px" }}
+            >
+              <Image
+                src="/assets/mzo_chine.jpg"
+                alt="formation image"
+                layout="fill"
+                objectFit="contain"
+              />
             </div>
+            <button
+              className={styles.sendButton}
+              onClick={() => handleOpenModal("CALL")}
+            >
+              Demande d'inscrition
+            </button>
+          </div>
+        </div>
+
+
+
+
       </div>
     </div>
   );

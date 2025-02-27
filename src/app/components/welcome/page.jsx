@@ -25,6 +25,11 @@ function Welcome() {
         <div className="pageDote"></div>
         <div className="pageDote"></div>
       </div>
+      <div className={style.valeursContainer}>
+        <span className={style.valeurItem}>Flexibilité</span>
+        <span className={style.valeurItem}>Rentabilité</span>
+        <span className={style.valeurItem}>Croissance</span>
+      </div>
     </div>
   );
 }
