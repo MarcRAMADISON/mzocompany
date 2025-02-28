@@ -16,7 +16,7 @@
 
 .logoMzo {
     position: relative;
-    width:60vw;
+    width: 60vw;
     height: 60vh;
     max-width: 500px;
     max-height: 500px;
@@ -29,7 +29,7 @@
     font-weight: 600;
     font-size: 1.4rem;
     max-width: 1280px;
-    width:80%;
+    width: 80%;
     text-align: center;
     z-index: 99;
     letter-spacing: 1px;
@@ -38,22 +38,21 @@
 }
 
 
- .video_container {
+.video_container {
     position: relative;
-    width: 100%;
+    width: 35vw;
     max-width: 800px;
-    margin: auto auto 10vh auto;
     overflow: hidden;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
 }
 
 
 .video_container::before {
     content: "";
     display: block;
-    padding-top: 56.25%; 
+    padding-top: 56.25%;
 }
 
 
@@ -66,35 +65,94 @@
     height: 100%;
 }
 
-.carouselContainer{
-    width:100vw;
+.carouselContainer {
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-@media (max-width:1080px){
+
+.videoContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    place-self: center;
+    margin:auto;
+}
+
+.video {
+    position: relative;
+    width: 700px;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    place-self: center;
+}
+
+.playButton{
+    animation: heartbeat2 2s infinite linear;
+}
+
+
+@media (max-width:1080px) {
     .titleDescription {
         margin: 5vh 0px;
         font-size: 1rem;
     }
-    .logoMzo{
+
+    .logoMzo {
         margin: 5vh 0px -7vh 0px;
     }
+
     .video_container {
-        width: 90%;
-        margin: 5vh auto -5vh auto;
+        width: 90vw;
+        height: fit-content;
     }
-    
-.filigrane {
-    top:40vh
-}
+
+    .filigrane {
+        top: 40vh
+    }
+    .videoContainer{
+        grid-template-columns: 100%;
+        width:60vw
+    }
+    .video{
+        width:90vw;
+        min-height:500px;
+    }
 }
 
+@media (max-width:480px) {
+    .video{
+        width:90vw;
+        margin: -150px 0px;
+    }
+}
+
+
 @keyframes heartbeat {
-    0%, 100% {
-      transform: scale(1);
+
+    0%,
+    100% {
+        transform: scale(1);
     }
+
     50% {
-      transform: scale(1.1);
+        transform: scale(1.1);
     }
-  }
+}
+
+@keyframes heartbeat2 {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.5);
+    }
+}

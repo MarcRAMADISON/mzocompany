@@ -52,6 +52,7 @@ function StarlinkProviderPage() {
             alignItems: "flex-end",
             justifyContent: "center",
             marginTop: "20px",
+            textAlign:'center'
           }}
         >
           <span className={styles.price}>226.000 AR</span>
@@ -97,8 +98,8 @@ function StarlinkProviderPage() {
             <div
               style={{
                 position: "relative",
-                width: "350px",
-                height: "350px",
+                width: "400px",
+                height: "400px",
               }}
               className={styles.imageStarlinkV4}
             >
@@ -110,13 +111,13 @@ function StarlinkProviderPage() {
               />
             </div>
           </div>
-          <span style={{ placeSelf: "center", color:"#fff" }}>
+          <span style={{ placeSelf: "center",textAlign:'center', color:"#fff", fontSize:"1.2rem" }}>
             Un coût materiel unique de 1.749.000Ar
           </span>
           <div
             style={{ display: "flex", placeSelf: "center", marginTop: "10px" }}
           >
-            <span style={{ fontWeight: "700", color:"#fff" }}>
+            <span style={{ fontWeight: "700", color:"#fff",fontWeight:'1.2rem' }}>
               + prix d'expedition 113.000Ar
             </span>
             <span
@@ -151,7 +152,7 @@ function StarlinkProviderPage() {
             <span style={{ marginTop: "50px" }} className={styles.offreTitle}>
               STARLINK MINI V4
             </span>
-            <span style={{ marginTop: "10px", color: '#fff' }}>
+            <span style={{ marginTop: "10px", color: '#fff',fontSize:'1.1rem' }}>
               Le forfait le plus abordable
             </span>
             <span style={{ marginTop: "10px",color:'#fff' }} className={styles.offreTitle}>
@@ -181,7 +182,7 @@ function StarlinkProviderPage() {
                 <li>Débit 100mbits/s</li>
               </ul>
             </div>
-            <span style={{ placeSelf: "center", marginTop: "30px", color: "#fff" }}>
+            <span style={{ placeSelf: "center", marginTop: "30px", color: "#fff",fontSize:'1.1rem' }}>
               Un coût materiel unique de 900.000Ar
             </span>
             <div
@@ -191,7 +192,7 @@ function StarlinkProviderPage() {
                 marginTop: "10px",
               }}
             >
-              <span style={{ fontWeight: "700", color:"#fff" }}>
+              <span style={{ fontWeight: "700", color:"#fff",fontSize:'1.1rem' }}>
                 + prix d'expedition 113.000Ar
               </span>
               <span
@@ -204,11 +205,11 @@ function StarlinkProviderPage() {
                 DHL
               </span>
             </div>
-            <div className="pageDoteContainer">
+            {/*<div className="pageDoteContainer">
               <div className="pageDote"></div>
               <div className="pageDote"></div>
               <div className="pageDote"></div>
-            </div>
+            </div>*/}
           </div>
         </div>
       </div>
@@ -516,6 +517,9 @@ function StarlinkProviderPage() {
           Frais de préstation <span style={{fontSize:'1.3rem',fontWeight:'700'}}>500.000 Ar</span><br/> à payer en une seule fois avec la
           commande des kits
         </span>
+      </div>
+      <div className={styles.sixth}>
+          <Image src="/assets/background_footer.png" layout="fill" objectFit="cover" alt="footer image"/>
       </div>
     </div>
   );

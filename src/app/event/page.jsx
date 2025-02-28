@@ -48,29 +48,6 @@ function EventPage() {
         confiance à MZO Event pour créer des souvenirs uniques et transformer
         chaque célébration en un moment mémorable.
       </span>
-      <div className={styles.valeursContainer}>
-        <div className={styles.valeurItem}>
-          <span className={styles.valeurTitle}>Fiabilité</span>
-          <span className={styles.valeur}>
-            Un service fiable et ponctuel, garantissant une organisation sans
-            stress.
-          </span>
-        </div>
-        <div className={styles.valeurItem}>
-          <span className={styles.valeurTitle}>Créativité</span>
-          <span className={styles.valeur}>
-            Des idées originales pour personnaliser chaque événement et le
-            rendre unique.
-          </span>
-        </div>
-        <div className={styles.valeurItem}>
-          <span className={styles.valeurTitle}>Passion</span>
-          <span className={styles.valeur}>
-            Un engagement total pour faire de chaque événement un moment
-            exceptionnel.
-          </span>
-        </div>
-      </div>
     </div>
   );
 }

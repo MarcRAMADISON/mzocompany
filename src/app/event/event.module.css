@@ -3,13 +3,15 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 720px;
+    min-height: 500px;
+    max-height: 100vh;
     margin-top: 80px;
-    margin-bottom: 150px;
+    margin-bottom: 50px;
 }
 
 .filigrane {
     position: absolute;
+    top:4vh;
     width: 80vw;
     height: auto;
     z-index: 0;
@@ -22,12 +24,12 @@
     height: 60vh;
     max-width: 500px;
     max-height: 500px;
-    margin-Top: 20vh;
+    margin: 5vh 0vh -150px 0px;
     z-index: 99;
 }
 
 .titleDescription {
-    margin: 5vh 0px;
+    margin: 0px;
     font-weight: 600;
     font-size: 1.4rem;
     max-width: 1280px;
@@ -39,32 +41,6 @@
     word-spacing: 4px;
 }
 
-.valeursContainer{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap:30px;
-    width:80%;
-    margin-top: 10vh;
-}
-
-.valeurItem{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-   
-}
-
-.valeurTitle{
-    color:#ff8c00;
-    font-size: 1.4rem;
-    font-weight: 700;
-}
-
-.valeur{
-    font-size: 1.1rem;
-    font-weight: 400;
-    margin-top: 30px;
-}
 
 @media (max-width:1080px){
     .valeursContainer{
@@ -83,6 +59,14 @@
     }
     .valeurItem{
         margin-top: 5vh;
+    }
+    .filigrane {
+        position: absolute;
+        top:25vh;
+        width: 80vw;
+        height: auto;
+        z-index: 0;
+        animation: heartbeat 3s infinite ease-in-out;
     }
 }
 

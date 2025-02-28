@@ -30,12 +30,15 @@
 .activityBlock{
     display: grid;
     grid-template-columns: repeat(5,1fr);
-    width: 90vw;
+    max-width: 100vw;
     gap:50px;
     letter-spacing: 2px;
     line-height: 25px;
     margin-bottom: 100px;
-    
+    max-width: 1700px;
+    justify-content: center;
+    align-items: center;
+    place-self: center; 
 }
 
 .description{
