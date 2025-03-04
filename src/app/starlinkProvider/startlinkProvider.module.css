@@ -11,7 +11,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url('/assets/backgroun_booklet1.jpeg');
+    background-image: url('/assets/background_starlink1.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -22,7 +22,7 @@
     font-size: 2.6rem;
     text-align: center;
     z-index: 99;
-    color: #ff8c00;
+    color: #f3b180;
     width: 'fit-content'
 }
 
@@ -52,7 +52,7 @@
 }
 
 .fourthContainer{
-    background-image: url('/assets/backgroun_booklet1.jpeg');
+    background-image: url('/assets/background_starlink2.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -60,6 +60,7 @@
 
 .offreDescription {
     border: 1px solid #fff;
+    max-width: 400px;
     width: fit-content;
     height: fit-content;
     display: flex;
@@ -255,6 +256,10 @@ ul.list_dash2 li {
 }
 
 @media (max-width:1080px) {
+
+    .tarifContainer {
+        max-width: 500px;
+    }
     
     .offreDescription {
         width: 90vw

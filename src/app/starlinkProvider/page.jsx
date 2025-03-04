@@ -35,7 +35,7 @@ function StarlinkProviderPage() {
      
       <div className={styles.thirdContainer}>
         <span
-          style={{ color: "#ff8c00", margin: "50px 0px 10px 0px" }}
+          style={{ color: "#f3b180", margin: "50px 0px 10px 0px" }}
           className={styles.serviceTitle}
         >
           OFFRES STARLINK PARTICULIER
@@ -58,7 +58,7 @@ function StarlinkProviderPage() {
           <span className={styles.price}>226.000 AR</span>
           <span
             style={{
-              color: "#ff8c00",
+              color: "#f3b180",
               fontSize: "0.9rem",
               fontWeight: "400",
               marginTop: "0px",
@@ -124,7 +124,7 @@ function StarlinkProviderPage() {
               style={{
                 fontWeight: "700",
                 marginLeft: "10px",
-                color: "#ff8c00",
+                color: "#f3b180",
               }}
             >
               DHL
@@ -165,7 +165,7 @@ function StarlinkProviderPage() {
           </div>
           <div className={styles.secondBlock}>
             <span
-              style={{ color: "#ff8c00", fontWeight: "700" }}
+              style={{ color: "#f3b180", fontWeight: "700" }}
               className={styles.titleDescription}
             >
               RESIDENTIEL LITE
@@ -199,7 +199,7 @@ function StarlinkProviderPage() {
                 style={{
                   fontWeight: "700",
                   marginLeft: "10px",
-                  color: "#ff8c00",
+                  color: "#f3b180",
                 }}
               >
                 DHL
@@ -218,7 +218,7 @@ function StarlinkProviderPage() {
         className={styles.fourthContainer}
       >
         <span
-          style={{ color: "#ff8c00", margin: "50px 0px 10px 0px" }}
+          style={{ color: "#f3b180", margin: "50px 0px 10px 0px" }}
           className={styles.serviceTitle}
         >
           OFFRES STARLINK ENTREPRISE
@@ -481,7 +481,7 @@ function StarlinkProviderPage() {
           <span
             style={{
               marginLeft: "10px",
-              color: "#ff8c00",
+              color: "#f3b180",
               fontWeight: "700",
               color:"#fff"
             }}
@@ -497,7 +497,7 @@ function StarlinkProviderPage() {
       </div>
       <div className={styles.fifteenContainer}>
         <div style={{display:'flex',flexDirection:'column'}}>
-          <span style={{ color: "#ff8c00", margin: "50px 0px 10px 0px", textAlign:'left',color:"#fff" }} className={styles.serviceTitle}>Pourquoi nous</span>
+          <span style={{ color: "#f3b180", margin: "50px 0px 10px 0px", textAlign:'left',color:"#e20515" }} className={styles.serviceTitle}>Pourquoi nous</span>
           <span style={{color:"#fff"}} className={styles.fifteenDescription} >
             Faire de service à moindre coût garantissant un support client
             personnalisé avec assistance starlink<br/><br/>
@@ -519,7 +519,7 @@ function StarlinkProviderPage() {
         </span>
       </div>
       <div className={styles.sixth}>
-          <Image src="/assets/background_footer.png" layout="fill" objectFit="cover" alt="footer image"/>
+          <Image src="/assets/background_starlink3.jpg" layout="fill" objectFit="cover" alt="footer image"/>
       </div>
     </div>
   );
