@@ -85,11 +85,13 @@
 .video {
     position: relative;
     width: 700px;
-    height: 700px;
+    height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
     place-self: center;
+    margin:10vh auto 0px auto;
+    cursor: pointer;
 }
 
 .playButton{
@@ -121,14 +123,16 @@
     }
     .video{
         width:90vw;
-        min-height:500px;
+        margin: -20px 0px;
+
     }
 }
 
 @media (max-width:480px) {
     .video{
         width:90vw;
-        margin: -150px 0px;
+        height:400px;
+        margin: -50px 0px;
     }
 }
 

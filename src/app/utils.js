@@ -63,9 +63,9 @@ export const listSocialMedia = [
 ];
 
 export const imagesContactCenter=[
-  '/assets/mzo_call_1.jpeg',
-  '/assets/mzo_call_1.jpeg',
-  '/assets/mzo_call_1.jpeg',
-  '/assets/mzo_call_1.jpeg',
-  '/assets/mzo_call_1.jpeg'
+  '/assets/image1.jpg',
+  '/assets/image2.jpg',
+  '/assets/image4.jpg',
+  '/assets/image6.jpg',
+  '/assets/image7.jpg'
 ]

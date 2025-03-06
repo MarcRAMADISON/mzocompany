@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import MenuBar from "../components/menuBar/page";
 import styles from "./contactCenter.module.css";
@@ -7,34 +7,35 @@ import CustomCarousel from "../components/carousel/page";
 import { imagesContactCenter } from "../utils";
 import ModalComponent from "../components/modal/page";
 import { useState } from "react";
+import DropdownMenu from "../components/dropdownMenu/page";
 
 function ContactCenterPage() {
   const [isOpen, setIsOpen] = useState(false);
-  const [currentVideo,setCurrentVideo]= useState("")
+  const [currentVideo, setCurrentVideo] = useState("");
 
-  const handleClickVideo = (title)=>{
-    console.log('title ***** ',title)
-    if(title === 'CHANLLENGE_MZO'){
-      setCurrentVideo("/assets/videos/mzo_call_1.mp4")
-    }else{
-      setCurrentVideo("/assets/videos/jda.mp4")
+  const handleClickVideo = (title) => {
+    console.log("title ***** ", title);
+    if (title === "CHANLLENGE_MZO") {
+      setCurrentVideo("/assets/videos/mzo_call_1.mp4");
+    } else {
+      setCurrentVideo("/assets/videos/jda.mp4");
     }
-    setIsOpen(true)
-  }
+    setIsOpen(true);
+  };
 
   return (
     <div>
       <MenuBar />
-      <ModalComponent isOpen={isOpen} onClose={()=>{
-        setIsOpen(false)
-        }}>
+      <ModalComponent
+        isOpen={isOpen}
+        onClose={() => {
+          setIsOpen(false);
+        }}
+      >
         <div>
           <div className={styles.video_container}>
             <video controls>
-              <source
-                src={currentVideo}
-                type="video/mp4"
-              ></source>
+              <source src={currentVideo} type="video/mp4"></source>
               Votre navigateur ne supporte pas la vidéo.
             </video>
           </div>
@@ -71,49 +72,116 @@ function ContactCenterPage() {
         </span>
       </div>
       <div className={styles.videoContainer}>
-        <div className={styles.video} onClick={(e)=>{
-          e.preventDefault()
-          handleClickVideo("CHANLLENGE_MZO")
-        }}>
-          <Image
-            src="/assets/play.png"
-            style={{ zIndex: 9 }}
-            width={60}
-            height={60}
-            alt="play logo"
-            className={styles.playButton}
-          />
-          <Image
-            src="/assets/miniature_challenge.jpg"
-            style={{ zIndex: 0 }}
-            objectFit="contain"
-            layout="fill"
-            alt="play logo"
-          />
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          <div
+            className={styles.video}
+            onClick={(e) => {
+              e.preventDefault();
+              handleClickVideo("CHANLLENGE_MZO");
+            }}
+          >
+            <Image
+              src="/assets/play.png"
+              style={{ zIndex: 9 }}
+              width={60}
+              height={60}
+              alt="play logo"
+              className={styles.playButton}
+            />
+            <Image
+              src="/assets/miniature_challenge.jpg"
+              style={{ zIndex: 0 }}
+              objectFit="contain"
+              layout="fill"
+              alt="play logo"
+            />
+          </div>
+          <span
+            style={{
+              color: "#000",
+              fontWeight: "bold",
+              fontSize: "1.2rem",
+              marginTop: "10px",
+            }}
+          >
+            RAZAFINDRAKOTO Zo Nirina José
+          </span>
+          <span style={{ color: "#555", fontSize: "1rem", marginTop: "5px" }}>
+            CEO-Directeur and founder
+          </span>
+          <span
+            style={{
+              color: "#555",
+              fontSize: "1rem",
+              margin: "5px 0vh 8vh 0vh",
+            }}
+          >
+            MZO Company - MZO Contact Center
+          </span>
         </div>
-        <div className={styles.video} onClick={(e)=>{
-          e.preventDefault()
-          handleClickVideo("JDA_PRESENTATION")
-        }}>
-          <Image
-            src="/assets/play.png"
-            style={{ zIndex: 9 }}
-            width={60}
-            height={60}
-            alt="play logo"
-            className={styles.playButton}
-          />
-          <Image
-            src="/assets/miniature_jda.jpg"
-            style={{ zIndex: 0 }}
-            objectFit="contain"
-            layout="fill"
-            alt="play logo"
-          />
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          <div
+            className={styles.video}
+            onClick={(e) => {
+              e.preventDefault();
+              handleClickVideo("JDA_PRESENTATION");
+            }}
+          >
+            <Image
+              src="/assets/play.png"
+              style={{ zIndex: 9 }}
+              width={60}
+              height={60}
+              alt="play logo"
+              className={styles.playButton}
+            />
+            <Image
+              src="/assets/miniature_jda.jpg"
+              style={{ zIndex: 0 }}
+              objectFit="contain"
+              layout="fill"
+              alt="play logo"
+            />
+          </div>
+          <span
+            style={{
+              color: "#000",
+              fontWeight: "bold",
+              fontSize: "1.2rem",
+              marginTop: "10px",
+            }}
+          >
+            Joao De Almeida
+          </span>
+          <span style={{ color: "#555", fontSize: "1rem", marginTop: "5px" }}>
+            CEO de JDA DIFFUSION
+          </span>
+          <span
+            style={{
+              color: "#555",
+              fontSize: "1rem",
+              margin: "5px 0vh 8vh 0vh",
+            }}
+          >
+            jdadiffusion.fr
+          </span>
         </div>
       </div>
+      <DropdownMenu />
       <div className={styles.carouselContainer}>
-        <CustomCarousel rows={imagesContactCenter} disposition="contain" />
+        <CustomCarousel rows={imagesContactCenter} objectPosition="50% 0%" />
       </div>
     </div>
   );

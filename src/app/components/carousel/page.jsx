@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import style from "./carousel.module.css";
 
-const CustomCarousel = ({ rows = [], disposition = "cover" }) => {
+const CustomCarousel = ({ rows = [], disposition = "cover", objectPosition="50% 50%" }) => {
   const responsive = {
     desktop: { breakpoint: { max: 3000, min: 1024 }, items: 4 },
     tablet: { breakpoint: { max: 1024, min: 464 }, items: 2 },
@@ -47,6 +47,7 @@ const CustomCarousel = ({ rows = [], disposition = "cover" }) => {
             alt="image about mzo"
             layout="fill"
             objectFit={disposition}
+            objectPosition={objectPosition}
           />
         </motion.div>
       ))}
