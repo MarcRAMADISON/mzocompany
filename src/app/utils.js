@@ -49,7 +49,7 @@ export const listSocialMedia = [
     value: "MZO CONTACT",
   },
   {
-    url: "",
+    url: "https://www.linkedin.com/company/mzo-company/",
     urlImage: "/assets/linkedin.png",
     name: "LINKEDIN",
     value: "MZO CONTACT",
