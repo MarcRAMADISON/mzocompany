@@ -43,7 +43,7 @@ export const listActivity = [
 
 export const listSocialMedia = [
   {
-    url: "https://www.facebook.com/story.php?story_fbid=122129788586531382&id=61565941471993",
+    url: "https://www.facebook.com/profile.php?id=61565941471993",
     urlImage: "/assets/facebook.png",
     name: "FACEBOOK",
     value: "MZO CONTACT",
