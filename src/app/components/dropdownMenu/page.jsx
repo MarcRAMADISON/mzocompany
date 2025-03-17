@@ -18,19 +18,19 @@ const items = [
       {
         videoUrl: "/assets/videos/anthony_video.mp4",
         slogan: "Un boxeur sur le ring comme au téléphone",
-        title: "Killer#2 Peter",
+        title: "Killer#2 Anthony",
         miniature: "/assets/miniature_anthony.jpg",
       },
       {
         videoUrl: "/assets/videos/harvey_video.mp4",
         slogan: "Harvey Specter est là pour mettre les objections en pièces",
-        title: "Killer#3 Peter",
+        title: "Killer#3 Harvey",
         miniature: "/assets/miniature_harvey.jpg",
       },
       {
         videoUrl: "/assets/videos/axel_video.mp4",
         slogan: "Le 𝐡é𝐫𝐨𝐬 qui n'abandonne jamais",
-        title: "Killer#4 Peter",
+        title: "Killer#4 Axel",
         miniature: "/assets/miniature_axel.jpg",
       },
       {
