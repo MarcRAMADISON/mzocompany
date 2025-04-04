@@ -98,8 +98,20 @@
     animation: heartbeat2 2s infinite linear;
 }
 
+.carouselTitle{
+    color:black;
+    font-size: 2.5rem;
+    place-self: center;
+    margin: auto;
+    font-weight: bold;
+    margin: 50px 0px -50px 0px;
+}
+
 
 @media (max-width:1080px) {
+    .carouselTitle{
+        font-size: 1.8rem;
+    }
     .titleDescription {
         margin: 5vh 0px;
         font-size: 1rem;

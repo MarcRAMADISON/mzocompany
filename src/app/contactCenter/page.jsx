@@ -4,7 +4,7 @@ import MenuBar from "../components/menuBar/page";
 import styles from "./contactCenter.module.css";
 import Image from "next/image";
 import CustomCarousel from "../components/carousel/page";
-import { imagesContactCenter } from "../utils";
+import { imagesContactCenter, lexacImages } from "../utils";
 import ModalComponent from "../components/modal/page";
 import { useState } from "react";
 import DropdownMenu from "../components/dropdownMenu/page";
@@ -180,8 +180,32 @@ function ContactCenterPage() {
         </div>
       </div>
       <DropdownMenu />
-      <div className={styles.carouselContainer}>
-        <CustomCarousel rows={imagesContactCenter} objectPosition="50% 0%" />
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          margin:'50px'
+        }}
+      >
+        <span className={styles.carouselTitle}>Challenge JDA Diffusion</span>
+        <div className={styles.carouselContainer}>
+          <CustomCarousel rows={imagesContactCenter} objectPosition="50% 0%" />
+        </div>
+      </div>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <span className={styles.carouselTitle}>Lexac Conseil</span>
+        <div className={styles.carouselContainer}>
+          <CustomCarousel rows={lexacImages} objectPosition="50% 0%" />
+        </div>
       </div>
     </div>
   );

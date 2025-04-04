@@ -69,3 +69,10 @@ export const imagesContactCenter=[
   '/assets/image6.jpg',
   '/assets/image7.jpg'
 ]
+
+export const lexacImages=[
+  '/assets/lexac1.jpg',
+  '/assets/lexac2.jpg',
+  '/assets/lexac3.jpg',
+  '/assets/lexac5.jpg'
+]
