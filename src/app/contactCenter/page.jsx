@@ -4,7 +4,7 @@ import MenuBar from "../components/menuBar/page";
 import styles from "./contactCenter.module.css";
 import Image from "next/image";
 import CustomCarousel from "../components/carousel/page";
-import { imagesContactCenter, lexacImages } from "../utils";
+import { lexacImages } from "../utils";
 import ModalComponent from "../components/modal/page";
 import { useState } from "react";
 import DropdownMenu from "../components/dropdownMenu/page";
@@ -14,9 +14,10 @@ function ContactCenterPage() {
   const [currentVideo, setCurrentVideo] = useState("");
 
   const handleClickVideo = (title) => {
-    console.log("title ***** ", title);
     if (title === "CHANLLENGE_MZO") {
       setCurrentVideo("/assets/videos/mzo_call_1.mp4");
+    } else if (title === 'SORTIE_JDA'){
+      setCurrentVideo("/assets/videos/sortie_jda.mp4");
     } else {
       setCurrentVideo("/assets/videos/jda.mp4");
     }
@@ -187,6 +188,30 @@ function ContactCenterPage() {
         </div>
       </div>
       <DropdownMenu />
+      <div
+        className={styles.video}
+        onClick={(e) => {
+          e.preventDefault();
+          handleClickVideo("SORTIE_JDA");
+        }}
+        style={{marginBottom:'50px'}}
+      >
+        <Image
+          src="/assets/play.png"
+          style={{ zIndex: 9 }}
+          width={60}
+          height={60}
+          alt="play logo"
+          className={styles.playButton}
+        />
+        <Image
+          src="/assets/sortie_jda.jpg"
+          style={{ zIndex: 0 }}
+          objectFit="contain"
+          layout="fill"
+          alt="play logo"
+        />
+      </div>
 
       <div
         style={{
@@ -208,12 +233,14 @@ function ContactCenterPage() {
           <CustomCarousel rows={lexacImages} objectPosition="50% 0%" />
         </div>
       </div>
-      <div className={styles.titleBlock} style={{marginBottom:'150px'}}>
-          <span className={styles.title}>Telerys Communication</span>
-          <span className={styles.description}>
-            Telerys Communication est une société française fournissant des services réseaux et télécom managés ainsi que l’intégration de solutions numériques à destination des entreprises depuis 2002.
-          </span>
-        </div>
+      <div className={styles.titleBlock} style={{ marginBottom: "150px" }}>
+        <span className={styles.title}>Telerys Communication</span>
+        <span className={styles.description}>
+          Telerys Communication est une société française fournissant des
+          services réseaux et télécom managés ainsi que l’intégration de
+          solutions numériques à destination des entreprises depuis 2002.
+        </span>
+      </div>
     </div>
   );
 }
