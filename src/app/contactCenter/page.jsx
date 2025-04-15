@@ -71,6 +71,13 @@ function ContactCenterPage() {
           sur leur coeur de métier en toute confiance;
         </span>
       </div>
+      <div className={styles.titleBlock}>
+        <span className={styles.title}>Challenge JDA Diffusion</span>
+        <span className={styles.description}>
+          Le challenge des 12.000.000 Ariary - Découvrez le concours de
+          télévente le plus exitant de Madagascar!
+        </span>
+      </div>
       <div className={styles.videoContainer}>
         <div
           style={{
@@ -180,33 +187,33 @@ function ContactCenterPage() {
         </div>
       </div>
       <DropdownMenu />
+
       <div
         style={{
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          margin:'50px'
         }}
       >
-        <span className={styles.carouselTitle}>Challenge JDA Diffusion</span>
-        <div className={styles.carouselContainer}>
-          <CustomCarousel rows={imagesContactCenter} objectPosition="50% 0%" />
+        <div className={styles.titleBlock}>
+          <span className={styles.title}>LEXAC: LEX Alliance Consulting</span>
+          <span className={styles.description}>
+            Le cabinet Lexac est dédié à la défense de vos droits, que ce soit
+            en droit des étrangers, droit de la famille, droit pénal ou en droit
+            des permis de conduire.
+          </span>
         </div>
-      </div>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        <span className={styles.carouselTitle}>Lexac Conseil</span>
         <div className={styles.carouselContainer}>
           <CustomCarousel rows={lexacImages} objectPosition="50% 0%" />
         </div>
       </div>
+      <div className={styles.titleBlock} style={{marginBottom:'150px'}}>
+          <span className={styles.title}>Telerys Communication</span>
+          <span className={styles.description}>
+            Telerys Communication est une société française fournissant des services réseaux et télécom managés ainsi que l’intégration de solutions numériques à destination des entreprises depuis 2002.
+          </span>
+        </div>
     </div>
   );
 }
