@@ -277,7 +277,7 @@ function BusenessPage() {
               className={styles.sendButton}
               onClick={() => handleOpenModal("CALL")}
             >
-              Demande d'inscrition
+              Demande d'inscription
             </button>
           </div>
         </div>
@@ -300,7 +300,7 @@ function BusenessPage() {
               className={styles.sendButton}
               onClick={() => handleOpenModal("CALL")}
             >
-              Demande d'inscrition
+              Demande d'inscription
             </button>
           </div>
         </div>
