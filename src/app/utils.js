@@ -54,7 +54,7 @@ export const listSocialMedia = [
     name: "LINKEDIN",
     value: "MZO CONTACT",
   },
-  {
+ {
     url: "https://wa.me/261389365978",
     urlImage: "/assets/watsapp.png",
     name: "WATSAPP",

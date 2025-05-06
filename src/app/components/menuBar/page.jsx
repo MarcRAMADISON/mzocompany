@@ -162,7 +162,8 @@ function MenuBar() {
           {listSocialMedia.map((media, index) => {
             return (
               <Link
-                href={media.url}
+                //href={media.url}
+                href=""
                 target="_blank"
                 key={index}
                 rel="noopener noreferrer"
@@ -301,11 +302,12 @@ function MenuBar() {
           id="sousMenuContact"
           ref={contactRef}
         >
-          {listSocialMedia.map((media, index) => {
+          {listSocialMedia.filter((l)=>l.name !== "WATSAPP").map((media, index) => {
             return (
               <Link
                 key={index}
-                href={media.url}
+                //href={media.url}
+                href=""
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -437,10 +439,11 @@ function MenuBar() {
           <div
             style={{ display: "flex", justifyContent: "center", width: "100%",marginBottom:'30px' }}
           >
-            {listSocialMedia.map((media, index) => {
+            {listSocialMedia.filter((l)=>l.name !== "WATSAPP").map((media, index) => {
               return (
                 <Link
-                  href={media.url}
+                  //href={media.url}
+                  href=""
                   target="_blank"
                   key={index}
                   rel="noopener noreferrer"
